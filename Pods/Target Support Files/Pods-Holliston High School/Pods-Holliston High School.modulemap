@@ -1,0 +1,6 @@
+framework module Pods_Holliston_High_School {
+  umbrella header "Pods-Holliston High School-umbrella.h"
+
+  export *
+  module * { export * }
+}

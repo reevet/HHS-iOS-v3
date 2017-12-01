@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1041477216254-j2dd1q2qu9mjkq9tarh8per6sre5haie.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1041477216254-j2dd1q2qu9mjkq9tarh8per6sre5haie</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCQGrKoegZj4qiGY9Xd3s89FfV0EKtIC1Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1041477216254</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>info.holliston.high.Holliston-High-School</string>
+	<key>PROJECT_ID</key>
+	<string>holliston-high-school</string>
+	<key>STORAGE_BUCKET</key>
+	<string>holliston-high-school.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1041477216254:ios:28328b0e8141b13c</string>
+	<key>DATABASE_URL</key>
+	<string>https://holliston-high-school.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A526ABEE60DB0C2AA89D2ED /* Pods_Holliston_High_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1F81F2B9DF6A56C2AC2B19 /* Pods_Holliston_High_School.framework */; };
+		470262B41FC31E5C00A89D97 /* SchedulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B31FC31E5C00A89D97 /* SchedulesTableViewCell.swift */; };
+		470262B61FC31F4700A89D97 /* SchedulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */; };
+		470262B81FC3222600A89D97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B71FC3222600A89D97 /* MenuViewController.swift */; };
+		4727732C1FC663BD00870CF4 /* LunchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */; };
+		4727732E1FC664AF00870CF4 /* LunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732D1FC664AF00870CF4 /* LunchTableViewCell.swift */; };
+		472773301FC664BD00870CF4 /* LunchDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732F1FC664BD00870CF4 /* LunchDetailsTableViewCell.swift */; };
+		472773341FC6693300870CF4 /* SWRevealViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472773351FC6693300870CF4 /* SWRevealViewController.framework */; };
+		472AB8721FC61FBD00D89A98 /* APParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472AB8731FC61FBD00D89A98 /* APParallaxHeader.framework */; };
+		472D01951FCE3DB2001A593A /* Toast_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472D01961FCE3DB2001A593A /* Toast_Swift.framework */; };
+		478544321FCB5FCC00A2D926 /* FeedUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544311FCB5FCC00A2D926 /* FeedUrls.swift */; };
+		478544341FCB665D00A2D926 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544331FCB665D00A2D926 /* NewsTableViewController.swift */; };
+		478544361FCB67DF00A2D926 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544351FCB67DF00A2D926 /* NewsTableViewCell.swift */; };
+		478544371FCB7AEB00A2D926 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478544381FCB7AEB00A2D926 /* Kingfisher.framework */; };
+		4785443A1FCB81D900A2D926 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544391FCB81D900A2D926 /* NewsDetailViewController.swift */; };
+		479590AB1FC2FE810090817F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590AA1FC2FE810090817F /* AppDelegate.swift */; };
+		479590B01FC2FE810090817F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479590AE1FC2FE810090817F /* Main.storyboard */; };
+		479590B21FC2FE810090817F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479590B11FC2FE810090817F /* Assets.xcassets */; };
+		479590B51FC2FE810090817F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479590B31FC2FE810090817F /* LaunchScreen.storyboard */; };
+		479590C01FC2FE810090817F /* Holliston_High_SchoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590BF1FC2FE810090817F /* Holliston_High_SchoolTests.swift */; };
+		479590CB1FC2FE810090817F /* Holliston_High_SchoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590CA1FC2FE810090817F /* Holliston_High_SchoolUITests.swift */; };
+		479590D91FC300620090817F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590D81FC300620090817F /* Article.swift */; };
+		479590DC1FC303680090817F /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590DB1FC303680090817F /* ArticleStore.swift */; };
+		479728561FC7183200437F8C /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728551FC7183200437F8C /* EventsTableViewController.swift */; };
+		479728581FC7184600437F8C /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728571FC7184600437F8C /* EventsTableViewCell.swift */; };
+		4797285A1FC7185800437F8C /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */; };
+		479D25FB1FC37DD70029CC19 /* CocoaPods install instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D25FA1FC37DD70029CC19 /* CocoaPods install instructions.swift */; };
+		479D26031FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */; };
+		47B0D21F1FCB890600391C5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47B0D21E1FCB890600391C5E /* GoogleService-Info.plist */; };
+		47B482641FC704C5002E5D51 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B482651FC704C5002E5D51 /* SwiftSoup.framework */; };
+		47BC376D1FCB971700740E49 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BC376E1FCB971700740E49 /* GoogleToolboxForMac.framework */; };
+		47BC5CB31FC8FA090014BF52 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BC5CB41FC8FA090014BF52 /* Fuzi.framework */; };
+		47BC5CB71FC902B30014BF52 /* DailyannDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC5CB61FC902B30014BF52 /* DailyannDetailViewController.swift */; };
+		47BCFA801FCC382E00B91792 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCFA7F1FCC382E00B91792 /* HomeViewController.swift */; };
+		47D3FC6B1FCF16B4006071B5 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6A1FCF16B4006071B5 /* RevealViewController.swift */; };
+		47D3FC6D1FCFC9B1006071B5 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6C1FCFC9B1006071B5 /* BaseTableViewCell.swift */; };
+		47D5025D1FC62D28002FAFB3 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */; };
+		47E6FB031FD1E36200D0888F /* FeedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E6FB041FD1E36200D0888F /* FeedKit.framework */; };
+		47E9B71C1FC87DFC00ED7ED0 /* DailyannTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71B1FC87DFC00ED7ED0 /* DailyannTableViewController.swift */; };
+		47E9B71E1FC87E1600ED7ED0 /* DailyannTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71D1FC87E1600ED7ED0 /* DailyannTableViewCell.swift */; };
+		47E9B7221FC8850700ED7ED0 /* XmlGoogleSitesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7211FC8850700ED7ED0 /* XmlGoogleSitesParser.swift */; };
+		47E9B7241FC8853100ED7ED0 /* JsonBloggerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7231FC8853100ED7ED0 /* JsonBloggerParser.swift */; };
+		47F7B1941FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7B1921FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		479590BC1FC2FE810090817F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4795909F1FC2FE810090817F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479590A61FC2FE810090817F;
+			remoteInfo = "Holliston High School";
+		};
+		479590C71FC2FE810090817F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4795909F1FC2FE810090817F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479590A61FC2FE810090817F;
+			remoteInfo = "Holliston High School";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		470264281FC34E3F00A89D97 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18BA7A15805EE8E848352FF5 /* Pods_Holliston_High_SchoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holliston_High_SchoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4166A51D06668FA308110856 /* Pods-Holliston High School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holliston High School.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holliston High School/Pods-Holliston High School.release.xcconfig"; sourceTree = "<group>"; };
+		470262B31FC31E5C00A89D97 /* SchedulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTableViewCell.swift; sourceTree = "<group>"; };
+		470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTableViewController.swift; sourceTree = "<group>"; };
+		470262B71FC3222600A89D97 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTableViewController.swift; sourceTree = "<group>"; };
+		4727732D1FC664AF00870CF4 /* LunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTableViewCell.swift; sourceTree = "<group>"; };
+		4727732F1FC664BD00870CF4 /* LunchDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		472773321FC668A000870CF4 /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472773351FC6693300870CF4 /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472AB8731FC61FBD00D89A98 /* APParallaxHeader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APParallaxHeader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472D01961FCE3DB2001A593A /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		478544311FCB5FCC00A2D926 /* FeedUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUrls.swift; sourceTree = "<group>"; };
+		478544331FCB665D00A2D926 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		478544351FCB67DF00A2D926 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		478544381FCB7AEB00A2D926 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		478544391FCB81D900A2D926 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		479590A71FC2FE810090817F /* Holliston High School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holliston High School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		479590AA1FC2FE810090817F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		479590AF1FC2FE810090817F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		479590B11FC2FE810090817F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		479590B41FC2FE810090817F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		479590B61FC2FE810090817F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479590BB1FC2FE810090817F /* Holliston High SchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Holliston High SchoolTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		479590BF1FC2FE810090817F /* Holliston_High_SchoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holliston_High_SchoolTests.swift; sourceTree = "<group>"; };
+		479590C11FC2FE810090817F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479590C61FC2FE810090817F /* Holliston High SchoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Holliston High SchoolUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		479590CA1FC2FE810090817F /* Holliston_High_SchoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holliston_High_SchoolUITests.swift; sourceTree = "<group>"; };
+		479590CC1FC2FE810090817F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479590D81FC300620090817F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		479590DB1FC303680090817F /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
+		479728551FC7183200437F8C /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		479728571FC7184600437F8C /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		479D25FA1FC37DD70029CC19 /* CocoaPods install instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CocoaPods install instructions.swift"; sourceTree = "<group>"; };
+		479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonGoogleCalendarParser.swift; sourceTree = "<group>"; };
+		47B0D21E1FCB890600391C5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		47B0D2201FCB8A8800391C5E /* Holliston High School.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Holliston High School.entitlements"; sourceTree = "<group>"; };
+		47B482651FC704C5002E5D51 /* SwiftSoup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSoup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC376E1FCB971700740E49 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CAC1FC8874C0014BF52 /* SwiftyXMLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyXMLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CAE1FC88A6B0014BF52 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CB01FC8C0F60014BF52 /* SwiftyXMLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyXMLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CB21FC8F81D0014BF52 /* Ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CB41FC8FA090014BF52 /* Fuzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fuzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BC5CB61FC902B30014BF52 /* DailyannDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyannDetailViewController.swift; sourceTree = "<group>"; };
+		47BCFA7F1FCC382E00B91792 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		47D3FC6A1FCF16B4006071B5 /* RevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
+		47D3FC6C1FCFC9B1006071B5 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		47E6FB041FD1E36200D0888F /* FeedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E9B71B1FC87DFC00ED7ED0 /* DailyannTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyannTableViewController.swift; sourceTree = "<group>"; };
+		47E9B71D1FC87E1600ED7ED0 /* DailyannTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyannTableViewCell.swift; sourceTree = "<group>"; };
+		47E9B7211FC8850700ED7ED0 /* XmlGoogleSitesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlGoogleSitesParser.swift; sourceTree = "<group>"; };
+		47E9B7231FC8853100ED7ED0 /* JsonBloggerParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonBloggerParser.swift; sourceTree = "<group>"; };
+		47F7B1921FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AF1F81F2B9DF6A56C2AC2B19 /* Pods_Holliston_High_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holliston_High_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92FF7733FBD8E849743A98C /* Pods-Holliston High School.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holliston High School.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Holliston High School/Pods-Holliston High School.debug.xcconfig"; sourceTree = "<group>"; };
+		E1F51AA7EAD41DBD929C8E86 /* Pods_Holliston_High_SchoolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holliston_High_SchoolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		479590A41FC2FE810090817F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E6FB031FD1E36200D0888F /* FeedKit.framework in Frameworks */,
+				472D01951FCE3DB2001A593A /* Toast_Swift.framework in Frameworks */,
+				47BC376D1FCB971700740E49 /* GoogleToolboxForMac.framework in Frameworks */,
+				478544371FCB7AEB00A2D926 /* Kingfisher.framework in Frameworks */,
+				47BC5CB31FC8FA090014BF52 /* Fuzi.framework in Frameworks */,
+				47B482641FC704C5002E5D51 /* SwiftSoup.framework in Frameworks */,
+				472773341FC6693300870CF4 /* SWRevealViewController.framework in Frameworks */,
+				472AB8721FC61FBD00D89A98 /* APParallaxHeader.framework in Frameworks */,
+				0A526ABEE60DB0C2AA89D2ED /* Pods_Holliston_High_School.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590B81FC2FE810090817F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590C31FC2FE810090817F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4720120F1FC4E84B0060F82E /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */,
+				470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */,
+				4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */,
+				479728551FC7183200437F8C /* EventsTableViewController.swift */,
+				47E9B71B1FC87DFC00ED7ED0 /* DailyannTableViewController.swift */,
+				478544331FCB665D00A2D926 /* NewsTableViewController.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		472012101FC4FEBB0060F82E /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				47D3FC6C1FCFC9B1006071B5 /* BaseTableViewCell.swift */,
+				470262B31FC31E5C00A89D97 /* SchedulesTableViewCell.swift */,
+				4727732D1FC664AF00870CF4 /* LunchTableViewCell.swift */,
+				479728571FC7184600437F8C /* EventsTableViewCell.swift */,
+				47E9B71D1FC87E1600ED7ED0 /* DailyannTableViewCell.swift */,
+				478544351FCB67DF00A2D926 /* NewsTableViewCell.swift */,
+				47F7B1921FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift */,
+				4727732F1FC664BD00870CF4 /* LunchDetailsTableViewCell.swift */,
+				479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4795909E1FC2FE810090817F = {
+			isa = PBXGroup;
+			children = (
+				479590A91FC2FE810090817F /* Holliston High School */,
+				479590BE1FC2FE810090817F /* Holliston High SchoolTests */,
+				479590C91FC2FE810090817F /* Holliston High SchoolUITests */,
+				479590A81FC2FE810090817F /* Products */,
+				B298506E129A8208CBA73741 /* Pods */,
+				48024D203F34B0523896179A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		479590A81FC2FE810090817F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				479590A71FC2FE810090817F /* Holliston High School.app */,
+				479590BB1FC2FE810090817F /* Holliston High SchoolTests.xctest */,
+				479590C61FC2FE810090817F /* Holliston High SchoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		479590A91FC2FE810090817F /* Holliston High School */ = {
+			isa = PBXGroup;
+			children = (
+				47B0D2201FCB8A8800391C5E /* Holliston High School.entitlements */,
+				479590AA1FC2FE810090817F /* AppDelegate.swift */,
+				479590AE1FC2FE810090817F /* Main.storyboard */,
+				479590B31FC2FE810090817F /* LaunchScreen.storyboard */,
+				47D3FC6A1FCF16B4006071B5 /* RevealViewController.swift */,
+				470262B71FC3222600A89D97 /* MenuViewController.swift */,
+				47BCFA7F1FCC382E00B91792 /* HomeViewController.swift */,
+				479590DA1FC303300090817F /* DataModel */,
+				472012101FC4FEBB0060F82E /* TableViewCells */,
+				4720120F1FC4E84B0060F82E /* TableViewControllers */,
+				47BC5CB51FC9028B0014BF52 /* DetailViewControllers */,
+				479590B11FC2FE810090817F /* Assets.xcassets */,
+				479590B61FC2FE810090817F /* Info.plist */,
+				47B0D21E1FCB890600391C5E /* GoogleService-Info.plist */,
+			);
+			path = "Holliston High School";
+			sourceTree = "<group>";
+		};
+		479590BE1FC2FE810090817F /* Holliston High SchoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				479590BF1FC2FE810090817F /* Holliston_High_SchoolTests.swift */,
+				479590C11FC2FE810090817F /* Info.plist */,
+			);
+			path = "Holliston High SchoolTests";
+			sourceTree = "<group>";
+		};
+		479590C91FC2FE810090817F /* Holliston High SchoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				479590CA1FC2FE810090817F /* Holliston_High_SchoolUITests.swift */,
+				479590CC1FC2FE810090817F /* Info.plist */,
+			);
+			path = "Holliston High SchoolUITests";
+			sourceTree = "<group>";
+		};
+		479590DA1FC303300090817F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				479590D81FC300620090817F /* Article.swift */,
+				479590DB1FC303680090817F /* ArticleStore.swift */,
+				478544311FCB5FCC00A2D926 /* FeedUrls.swift */,
+				479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */,
+				47E9B7231FC8853100ED7ED0 /* JsonBloggerParser.swift */,
+				47E9B7211FC8850700ED7ED0 /* XmlGoogleSitesParser.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		47BC5CB51FC9028B0014BF52 /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47BC5CB61FC902B30014BF52 /* DailyannDetailViewController.swift */,
+				478544391FCB81D900A2D926 /* NewsDetailViewController.swift */,
+			);
+			path = DetailViewControllers;
+			sourceTree = "<group>";
+		};
+		48024D203F34B0523896179A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47E6FB041FD1E36200D0888F /* FeedKit.framework */,
+				472D01961FCE3DB2001A593A /* Toast_Swift.framework */,
+				47BC376E1FCB971700740E49 /* GoogleToolboxForMac.framework */,
+				478544381FCB7AEB00A2D926 /* Kingfisher.framework */,
+				47BC5CB41FC8FA090014BF52 /* Fuzi.framework */,
+				47BC5CB21FC8F81D0014BF52 /* Ono.framework */,
+				47BC5CB01FC8C0F60014BF52 /* SwiftyXMLParser.framework */,
+				47BC5CAE1FC88A6B0014BF52 /* SWXMLHash.framework */,
+				47BC5CAC1FC8874C0014BF52 /* SwiftyXMLParser.framework */,
+				47B482651FC704C5002E5D51 /* SwiftSoup.framework */,
+				472773351FC6693300870CF4 /* SWRevealViewController.framework */,
+				472773321FC668A000870CF4 /* SWRevealViewController.framework */,
+				472AB8731FC61FBD00D89A98 /* APParallaxHeader.framework */,
+				479D25FA1FC37DD70029CC19 /* CocoaPods install instructions.swift */,
+				AF1F81F2B9DF6A56C2AC2B19 /* Pods_Holliston_High_School.framework */,
+				18BA7A15805EE8E848352FF5 /* Pods_Holliston_High_SchoolTests.framework */,
+				E1F51AA7EAD41DBD929C8E86 /* Pods_Holliston_High_SchoolUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B298506E129A8208CBA73741 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B92FF7733FBD8E849743A98C /* Pods-Holliston High School.debug.xcconfig */,
+				4166A51D06668FA308110856 /* Pods-Holliston High School.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		479590A61FC2FE810090817F /* Holliston High School */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479590CF1FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High School" */;
+			buildPhases = (
+				22E6F9D197E49C7DA035D92E /* [CP] Check Pods Manifest.lock */,
+				479590A31FC2FE810090817F /* Sources */,
+				479590A41FC2FE810090817F /* Frameworks */,
+				479590A51FC2FE810090817F /* Resources */,
+				470264281FC34E3F00A89D97 /* Embed Frameworks */,
+				8EAC9019C4FD9DB7B485BC8B /* [CP] Embed Pods Frameworks */,
+				36FFA501A47C2E3A0F5DC6EE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Holliston High School";
+			productName = "Holliston High School";
+			productReference = 479590A71FC2FE810090817F /* Holliston High School.app */;
+			productType = "com.apple.product-type.application";
+		};
+		479590BA1FC2FE810090817F /* Holliston High SchoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479590D21FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High SchoolTests" */;
+			buildPhases = (
+				479590B71FC2FE810090817F /* Sources */,
+				479590B81FC2FE810090817F /* Frameworks */,
+				479590B91FC2FE810090817F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479590BD1FC2FE810090817F /* PBXTargetDependency */,
+			);
+			name = "Holliston High SchoolTests";
+			productName = "Holliston High SchoolTests";
+			productReference = 479590BB1FC2FE810090817F /* Holliston High SchoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		479590C51FC2FE810090817F /* Holliston High SchoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479590D51FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High SchoolUITests" */;
+			buildPhases = (
+				479590C21FC2FE810090817F /* Sources */,
+				479590C31FC2FE810090817F /* Frameworks */,
+				479590C41FC2FE810090817F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479590C81FC2FE810090817F /* PBXTargetDependency */,
+			);
+			name = "Holliston High SchoolUITests";
+			productName = "Holliston High SchoolUITests";
+			productReference = 479590C61FC2FE810090817F /* Holliston High SchoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4795909F1FC2FE810090817F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Tom Reeve";
+				TargetAttributes = {
+					479590A61FC2FE810090817F = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					479590BA1FC2FE810090817F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 479590A61FC2FE810090817F;
+					};
+					479590C51FC2FE810090817F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 479590A61FC2FE810090817F;
+					};
+				};
+			};
+			buildConfigurationList = 479590A21FC2FE810090817F /* Build configuration list for PBXProject "Holliston High School" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4795909E1FC2FE810090817F;
+			productRefGroup = 479590A81FC2FE810090817F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				479590A61FC2FE810090817F /* Holliston High School */,
+				479590BA1FC2FE810090817F /* Holliston High SchoolTests */,
+				479590C51FC2FE810090817F /* Holliston High SchoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		479590A51FC2FE810090817F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479590B51FC2FE810090817F /* LaunchScreen.storyboard in Resources */,
+				47B0D21F1FCB890600391C5E /* GoogleService-Info.plist in Resources */,
+				479590B21FC2FE810090817F /* Assets.xcassets in Resources */,
+				479590B01FC2FE810090817F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590B91FC2FE810090817F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590C41FC2FE810090817F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E6F9D197E49C7DA035D92E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Holliston High School-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36FFA501A47C2E3A0F5DC6EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holliston High School/Pods-Holliston High School-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EAC9019C4FD9DB7B485BC8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Holliston High School/Pods-Holliston High School-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APParallaxHeader/APParallaxHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APParallaxHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holliston High School/Pods-Holliston High School-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		479590A31FC2FE810090817F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F7B1941FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift in Sources */,
+				470262B61FC31F4700A89D97 /* SchedulesTableViewController.swift in Sources */,
+				4797285A1FC7185800437F8C /* EventsDetailsTableViewCell.swift in Sources */,
+				478544321FCB5FCC00A2D926 /* FeedUrls.swift in Sources */,
+				47D3FC6D1FCFC9B1006071B5 /* BaseTableViewCell.swift in Sources */,
+				478544361FCB67DF00A2D926 /* NewsTableViewCell.swift in Sources */,
+				47E9B71C1FC87DFC00ED7ED0 /* DailyannTableViewController.swift in Sources */,
+				479590AB1FC2FE810090817F /* AppDelegate.swift in Sources */,
+				4727732C1FC663BD00870CF4 /* LunchTableViewController.swift in Sources */,
+				4727732E1FC664AF00870CF4 /* LunchTableViewCell.swift in Sources */,
+				47E9B7221FC8850700ED7ED0 /* XmlGoogleSitesParser.swift in Sources */,
+				47D5025D1FC62D28002FAFB3 /* BaseTableViewController.swift in Sources */,
+				479590DC1FC303680090817F /* ArticleStore.swift in Sources */,
+				479728581FC7184600437F8C /* EventsTableViewCell.swift in Sources */,
+				47E9B71E1FC87E1600ED7ED0 /* DailyannTableViewCell.swift in Sources */,
+				4785443A1FCB81D900A2D926 /* NewsDetailViewController.swift in Sources */,
+				470262B41FC31E5C00A89D97 /* SchedulesTableViewCell.swift in Sources */,
+				479728561FC7183200437F8C /* EventsTableViewController.swift in Sources */,
+				479590D91FC300620090817F /* Article.swift in Sources */,
+				47BCFA801FCC382E00B91792 /* HomeViewController.swift in Sources */,
+				47BC5CB71FC902B30014BF52 /* DailyannDetailViewController.swift in Sources */,
+				470262B81FC3222600A89D97 /* MenuViewController.swift in Sources */,
+				472773301FC664BD00870CF4 /* LunchDetailsTableViewCell.swift in Sources */,
+				479D26031FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift in Sources */,
+				47E9B7241FC8853100ED7ED0 /* JsonBloggerParser.swift in Sources */,
+				478544341FCB665D00A2D926 /* NewsTableViewController.swift in Sources */,
+				479D25FB1FC37DD70029CC19 /* CocoaPods install instructions.swift in Sources */,
+				47D3FC6B1FCF16B4006071B5 /* RevealViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590B71FC2FE810090817F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479590C01FC2FE810090817F /* Holliston_High_SchoolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479590C21FC2FE810090817F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479590CB1FC2FE810090817F /* Holliston_High_SchoolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		479590BD1FC2FE810090817F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479590A61FC2FE810090817F /* Holliston High School */;
+			targetProxy = 479590BC1FC2FE810090817F /* PBXContainerItemProxy */;
+		};
+		479590C81FC2FE810090817F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479590A61FC2FE810090817F /* Holliston High School */;
+			targetProxy = 479590C71FC2FE810090817F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		479590AE1FC2FE810090817F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				479590AF1FC2FE810090817F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		479590B31FC2FE810090817F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				479590B41FC2FE810090817F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		479590CD1FC2FE810090817F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		479590CE1FC2FE810090817F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		479590D01FC2FE810090817F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92FF7733FBD8E849743A98C /* Pods-Holliston High School.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Holliston High School/Holliston High School.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LD7974WE2;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "Holliston High School/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-School";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		479590D11FC2FE810090817F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4166A51D06668FA308110856 /* Pods-Holliston High School.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Holliston High School/Holliston High School.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LD7974WE2;
+				INFOPLIST_FILE = "Holliston High School/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-School";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		479590D31FC2FE810090817F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Holliston High SchoolTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-SchoolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holliston High School.app/Holliston High School";
+			};
+			name = Debug;
+		};
+		479590D41FC2FE810090817F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Holliston High SchoolTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-SchoolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holliston High School.app/Holliston High School";
+			};
+			name = Release;
+		};
+		479590D61FC2FE810090817F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Holliston High SchoolUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-SchoolUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Holliston High School";
+			};
+			name = Debug;
+		};
+		479590D71FC2FE810090817F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Holliston High SchoolUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.holliston.high.Holliston-High-SchoolUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Holliston High School";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		479590A21FC2FE810090817F /* Build configuration list for PBXProject "Holliston High School" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479590CD1FC2FE810090817F /* Debug */,
+				479590CE1FC2FE810090817F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479590CF1FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High School" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479590D01FC2FE810090817F /* Debug */,
+				479590D11FC2FE810090817F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479590D21FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High SchoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479590D31FC2FE810090817F /* Debug */,
+				479590D41FC2FE810090817F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479590D51FC2FE810090817F /* Build configuration list for PBXNativeTarget "Holliston High SchoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479590D61FC2FE810090817F /* Debug */,
+				479590D71FC2FE810090817F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4795909F1FC2FE810090817F /* Project object */;
+}
