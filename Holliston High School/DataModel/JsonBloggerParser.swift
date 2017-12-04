@@ -10,12 +10,14 @@ import Foundation
 import SwiftSoup
 
 /**
- * parses JSON data received from the Blogger API
+ Parses JSON data received from the Blogger API
  */
 public class JsonBloggerParser {
 
-    /* these are the names of the "tags" in the JSON data
-     i.e. the JSON data should look like this:
+    /**
+     These are the names of the "tags" in the JSON data.
+     That is, the JSON data should look like this:
+     ````swift
      {
         [item: {
             summary: "A Day",
@@ -34,10 +36,14 @@ public class JsonBloggerParser {
         static let url = "selfLink"
     }
 
-    // the storage list of articles (posts)
+    /// the storage list of articles (posts)
     var articleList = [Article]()
 
-    /* parses the provided data, one entry at a time, to get individual articles */
+    /**
+     Parses the provided data, one entry at a time, to get individual articles
+     - Parameter data: the downloaded data to parse
+     - Returns: an array of articles
+     */
     func parse(data: Data) -> [Article] {
         
         // set holders for data
@@ -98,8 +104,11 @@ public class JsonBloggerParser {
         return articleList
     }
     
-    /* special instructions for parsing the image URL source
-        this finds the first <img> tag and returns its "src" attribute */
+    /**
+     Special instructions for parsing the image URL source. This finds the first <img> tag and returns its "src" attribute
+     - Parameter desc: the description string to parse
+     - Returns: a string url for the first image in the desc, or "" if not found
+     */
     func parseImgSrc(desc: String) -> String {
         var imgSrc = ""
         
@@ -123,8 +132,11 @@ public class JsonBloggerParser {
         return imgSrc
     }
     
-    /* special instructions for parsing the details
-     this finds the first <img> tag removes it */
+    /**
+     Special instructions for parsing the details. This finds the first <img> tag removes it (the first image will be cached and displayed natively, not via web call
+     - Parameter desc: the description text of the item
+     - Returns: the same HTML string, without the img tag
+     */
     func parseDetails(desc: String) -> String {
         // if there is an <img> tag....
         if desc.range(of: "<img") != nil  {
@@ -144,8 +156,11 @@ public class JsonBloggerParser {
         return desc
     }
 
-    /* special instructions for parsing the date.
-    this converts the string into a data object */
+    /**
+     Special instructions for parsing the date. This converts the string into a data object
+     - Parameter string: the date as a formatted string
+     - Returns: a Date object
+     */
     func parseDate(string: String) -> Date? {
         
         // expected format: 2013-05-14T07:30:00-04:00

@@ -9,7 +9,8 @@
 import UIKit
 import Kingfisher
 
-/* the viewController for showing a single News post */
+/**
+ The View Controller for showing a single News post */
 class NewsDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,13 +27,17 @@ class NewsDetailViewController: UIViewController {
     
     var pushNewsIndex = -1
     
-    /* starts the controller */
+    /**
+     Starts the controller
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
     
-    /* retrieves and displays the necessary article */
+    /**
+     Retrieves and displays the necessary article
+     */
     func configureView() {
         
         // if article isn't set, uses the first article in the article store

@@ -8,20 +8,35 @@
 
 import Foundation
 
-/** this is the basic class of a single post. It holds one calendar event, one schedule,
- * one news post, etc.
+/**
+ This is the basic class of a single post. It holds one calendar event, one schedule, one news post, etc.
  */
 public class Article: NSObject, NSCoding {
     
-    // properties of an article
-    let title: String   // the title of the post, or name of the calendar event
-    let date: Date      // the published date of a news item, or the start date of the event
-    let url: String     // the url to the post or event
-    let imgSrc: String  // the url of the first image within the post (applies only to news posts)
-    let details: String // the content of the post, or the description section of the event
+    //===================================================================================================
+    // pragma MARK:  PROPERTIES
+    //===================================================================================================
+
+    /// the title of the post, or name of the calendar event
+    let title: String
+    
+    /// the published date of a news item, or the start date of the event
+    let date: Date
+    
+    /// the url to the post or event
+    let url: String
+    
+    /// the url of the first image within the post (applies only to news posts)
+    let imgSrc: String
+    
+    /// the content of the post, or the description section of the event
+    let details: String
+    
+    /// a formatted version of the date
     var formattedDate: String = ""
     
-    var key: String {   // a unique key, which is usually just the URL for the post
+    /// a unique key, which is usually just the URL for the post
+    var key: String {
         get {
             guard url != "" else {
                 return "\(title)\(date)"
@@ -30,7 +45,18 @@ public class Article: NSObject, NSCoding {
         }
     }
     
-    // create a new article instance
+    //===================================================================================================
+    // pragma MARK:  INITIALIZER
+    //===================================================================================================
+
+    /**
+    Creates a new article instance
+     - Parameter title: the title of the article
+     - Parameter date: the start date or published date (required)
+     - Parameter url: the url to the article online
+     - Parameter details: the article content or description
+     - Parameter imgSrc: the article's first image
+     */
     init(title: String, date:Date, url: String, details: String, imgSrc: String ) {
         self.title = title
         self.date = date
@@ -39,7 +65,14 @@ public class Article: NSObject, NSCoding {
         self.imgSrc = imgSrc
     }
     
-    // the encoding structure so the article can be cached to local storage
+    //===================================================================================================
+    // pragma MARK:  ENCODING
+    //===================================================================================================
+    
+    /**
+    The encoding structure so the article can be cached to local storage
+     -Parameter aCoder: the coder
+    */
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(title, forKey: "title")
         aCoder.encode(date, forKey: "date")
@@ -48,7 +81,10 @@ public class Article: NSObject, NSCoding {
         aCoder.encode(imgSrc, forKey: "imgSrc")
     }
     
-    // the decoding structure so the article can be retrieved from local storage
+    /**
+    The decoding structure so the article can be retrieved from local storage
+     - Parameter: the decoder
+     */
     public required init?(coder aDecoder: NSCoder) {
         title = aDecoder.decodeObject(forKey: "title") as! String
         date = aDecoder.decodeObject(forKey: "date") as! Date

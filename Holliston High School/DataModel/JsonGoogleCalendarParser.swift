@@ -10,20 +10,22 @@ import Foundation
 import SwiftSoup // used to strip any HTML tags in the details section
 
 /**
- * parses JSON data received from the Google Calendar API
+ Parses JSON data received from the Google Calendar API
  */
 public class JsonGoogleCalendarParser {
     
-    /* these are the names of the "tags" in the JSON data
-       i.e. the JSON data should look like this:
-       {
+    /**
+     These are the names of the "tags" in the JSON data.
+       That is, the JSON data should look like this:
+       ```swift
+     {
          [item: {
-                   summary: "A Day",
-                   description: "7:30 - 8:42  A block etc",
-                   start: {
-                        date: "2017-10-12"
-                            }
-                    etc.
+            summary: "A Day",
+            description: "7:30 - 8:42  A block etc",
+            start: {
+            date: "2017-10-12"
+          }]
+        etc.
      */
     struct FeedTags {
         static let feed = ""
@@ -36,10 +38,14 @@ public class JsonGoogleCalendarParser {
         static let url = "selfLink"
     }
     
-    // the storage list of articles (events)
+    /// the storage list of articles (events)
     var articleList = [Article]()
     
-    /* parses the provided data, one entry at a time, to get individual articles */
+    /**
+     Parses the provided data, one entry at a time, to get individual articles
+     - Parameter data: the downloaded data to parse
+     - Returns: an array of articles
+     */
     func parse(data: Data) -> [Article] {
         
         // set holders for data
@@ -98,8 +104,11 @@ public class JsonGoogleCalendarParser {
         return articleList
     }
     
-    // special instructions for parsing the details.
-    // this strips out any HTML from the string
+    /**
+    Special instructions for parsing the details. This strips out any HTML from the string
+     - Parameter desc: the description string being parsed
+     - Returns: a string with HTML tags stripped out
+     */
     func parseDetails(desc: String) -> String {
         if desc.range(of: "<p>") != nil  {
             do {
@@ -115,8 +124,11 @@ public class JsonGoogleCalendarParser {
         return desc
     }
     
-    // special instructions for parsing the date.
-    // this checks the exact date structure and formats appropriately
+    /**
+    Special instructions for parsing the date. This checks the exact date structure and formats appropriately
+     - Parameter item: the downloaded item to parse
+     - Returns: a Date derived from the item, or nil
+     */
     func parseDate(item: [String: Any]) -> Date? {
         
         // if the date is "date only" (no time included), e.g. 2013-05-14

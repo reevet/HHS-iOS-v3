@@ -10,13 +10,15 @@ import Foundation
 import Fuzi  // used to convert XML into a DOM model
 
 /**
- * parses JSON data received from the Google Sites XHTML
+ Parses JSON data received from the Google Sites XHTML
  */
 public class XmlGoogleSitesParser {
     
-    /* these are the names of the "tags" in the XML data
-     i.e. the XML data should look like this:
-     <feed>
+    /**
+     These are the names of the "tags" in the XML data.
+     That is, the XML data should look like this:
+     ```swift
+       <feed>
          <entry>
              <title>Announcements for Nov. 12, 2017</title>
              <published>2017-11-12T07:30:00-04:00</published>
@@ -38,10 +40,13 @@ public class XmlGoogleSitesParser {
     // the storage list of articles (posts)
     var articleList = [Article]()
     
-    /* parses the provided data, one entry at a time, to get individual articles.
-     NOTE: one "article" is a day's worth of announcements, which are all poted together.
-     For example, one "article" for October 15 would have a details sections containg all
-     of the day's announcements, including a club meeting time, sports registration, etc. */
+    /**
+     Parses the provided data, one entry at a time, to get individual articles.
+
+     **NOTE:** one "article" is a day's worth of announcements, which are all poted together. For example, one "article" for October 15 would have a details sections containg all of the day's announcements, including a club meeting time, sports registration, etc.
+     - Parameter data: the downloaded data to parse
+     - Returns: an array of articles
+     */
     func parse(data: Data) -> [Article] {
         
         //set holders for data
@@ -94,9 +99,11 @@ public class XmlGoogleSitesParser {
         return articleList
     }
     
-    /* special instructions for parsing the url
-       This cycles through all urls, and keeps the one with
-       rel="alternate" */
+    /**
+     Special instructions for parsing the url.This cycles through all urls, and keeps the one with rel="alternate"
+     - Parameter links: an array of link elements
+     - Returns: a string url for the article's post
+     */
     func parseLinks(links: [XMLElement]) -> String
     {
         for link in links {
@@ -110,8 +117,10 @@ public class XmlGoogleSitesParser {
         return ""
     }
     
-    /* special instructions for parsing the date.
-    This converts a string into a Date object */
+    /**
+     Special instructions for parsing the date. This converts a string into a Date object
+     - Parameter item: the date as a formatted string
+     - Returns: a Date object*/
     func parseDate(item: String) -> Date? {
         
         // expected format: 2017-10-12T09:14:00.610Z

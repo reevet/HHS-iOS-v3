@@ -9,7 +9,9 @@
 import UIKit
 import Kingfisher  // assists with downloading and caching images
 
-/* the tablecontroller that displays the list of news posts */
+/**
+ The TableView Controller that displays the list of news posts
+ */
 class NewsTableViewController: BaseTableViewController {
 
     // the hamburger icon in the top left
@@ -39,10 +41,11 @@ class NewsTableViewController: BaseTableViewController {
         super.viewDidLoad()
     }
     
-    /* this method is set up to allow grouping of articles in sections. However,
-     the news posts are not grouped, we this simply uses the superclass
-     to adds all articles to a single group. This grouping is overkill, but is
-     left in place so that this class is similar to other TableViewController subclasses  */
+    /**
+     This method is set up to allow grouping of articles in sections. However, the news posts are not grouped, we this simply uses the superclass to adds all articles to a single group. This grouping is overkill, but is left in place so that this class is similar to other TableViewController subclasses
+     - Parameter list: the array of articles to group
+     - Returns an array of ArticleGroups. In this case, contains only a single group
+     */
     override func groupArticles(list: [Article]) -> [ArticleGroup] {
         
         // creates a sectionlist with only a single section in list

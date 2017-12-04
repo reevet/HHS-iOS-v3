@@ -11,11 +11,15 @@ import SWRevealViewController
 import SwiftSoup
 
 /**
- * controls the data in the Home screen
+ * Controls the data in the Home screen
  */
 class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
 
-    // the hamburger menu button
+    //===================================================================================================
+    // pragma MARK:  PROPERTIES
+    //===================================================================================================
+    
+    /// the hamburger menu button
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     // items in the News section
@@ -50,10 +54,16 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
     var tomorrowLunchArticle: Article? = nil
     var todayDailyannArticle: Article? = nil
     
-    var debugNewsFirst = false
-    
+    /// a tracker to know which news article to be pushed through to the detailview. Usually used in response to a cloud notification. The value represents the index position in the news article array, where 0 = most recent article. -1 represents "no article being pushed."
     var pushNewsIndex = -1
     
+    //===================================================================================================
+    // pragma MARK:  SETUP
+    //===================================================================================================
+    
+    /**
+     Sets up the Home display
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -109,7 +119,9 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         receiveDailyannUpdate(list: dailyannStore.queryArticles(limit: 1))
     }
     
-    // set up the menu button to trigger the side menu
+    /**
+     Sets up the menu button to trigger the side menu
+     */
     func setSWRevealFor(button: UIBarButtonItem) {
         if self.revealViewController() != nil {
             button.target = self.revealViewController()
@@ -118,8 +130,10 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         }
     }
     
-    // a simple function to get today's date, but with the time set to 00:00:00
-    func today() -> Date {
+    /**
+     Sets a date for today, but with time 00:00:00.
+     */
+     func today() -> Date {
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond], from: Date())
         components.hour = 0
@@ -129,7 +143,13 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         return cal.date(from: components) as Date!
     }
     
-    /* fills data in the news section views */
+    //===================================================================================================
+    // pragma MARK:  DATA POPULATION
+    //===================================================================================================
+
+    /**
+     Fills data in the news section views
+     */
     func fillNewsInfo() {
         
         // hide the news section if there's no article or date
@@ -145,6 +165,8 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         
         do {
             if let details = newsArticle?.details {
+                
+                // strip HTML for the snippet
                 let doc: Document = try SwiftSoup.parse(details)
                 let strippedDetails = try doc.text()
                 newsSnippetLabel.text = strippedDetails
@@ -163,7 +185,9 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         newsView.setNeedsDisplay()
     }
     
-    /* fills data in the today section */
+    /**
+     Fills data in the today section
+     */
     func fillTodayInfo() {
         
         // hide the today section is there's no article or date
@@ -191,7 +215,9 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         todayView.setNeedsDisplay()
     }
     
-    /* fills date into the tomorrow section */
+    /**
+     Fills date into the tomorrow section
+     */
     func fillTomorrowInfo() {
         
         // hide the tomorrow section if there's no article or date
@@ -212,7 +238,9 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         tomorrowView.setNeedsDisplay()
     }
     
-    /* chooses an image for the icon, based on the first letter of the provided string */
+    /**
+     Chooses an image for the icon, based on the first letter of the provided string
+     */
     func getIcon(title: String) -> UIImage {
         
         //create an index from the start, one letter long
@@ -234,94 +262,11 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         }
     }
     
-    /* reacts to notice that some type of data download occurred */
-    func receiveUpdate(storeType: ArticleStore.StoreType, list: [Article]) {
-        if storeType == ArticleStore.StoreType.NEWS {
-            receiveNewsUpdate(list: list)
-        } else if storeType == ArticleStore.StoreType.DAILY_ANN {
-            receiveDailyannUpdate(list: list)
-        }  else if storeType == ArticleStore.StoreType.LUNCH {
-            receiveLunchUpdate(list: list)
-        } else if storeType == ArticleStore.StoreType.SCHEDULES {
-            receiveSchedUpdate(list: list)
-        }
-    }
-    
-    /* reacts to notice that a news data download has occurred */
-    func receiveNewsUpdate(list: [Article]) {
-        
-        // either accept the first article and show it, or hide the news section
-        if list.count >= 1 {
-            newsArticle = list[0]
-            
-            // TODO: Remove this debug code
-            if debugNewsFirst == true {
-                newsArticle = list[1]
-                debugNewsFirst = false;
-            }
-            // END debug code */
-            
-            newsView.isHidden = false
-            fillNewsInfo()
-        } else {
-            newsView.isHidden = true
-        }
-    }
-    
-    /* reacts to notice that a schedule data download has occurred */
-    func receiveSchedUpdate(list: [Article]) {
-        
-        // either accept the first article for today and show it, or hide the section
-        if list.count >= 1 {
-            todaySchedArticle = list[0]
-            todayView.isHidden = false
-            fillTodayInfo()
-        } else {
-            todayView.isHidden = true
-        }
-        
-        // either accept the second article for tomorrow and show it, or hide the section
-        if list.count >= 2 {
-            tomorrowSchedArticle = list[1]
-            tomorrowView.isHidden = false
-            fillTomorrowInfo()
-        } else {
-            tomorrowView.isHidden = true
-        }
-    }
-    
-    /* reacts to notice that a lunch data download has occurred */
-    func receiveLunchUpdate(list: [Article]) {
-        
-        // either accept the first article and show it, or hide the section
-        if list.count >= 1 {
-            todayLunchArticle = list[0]
-            todayLunch.isHidden = false
-            fillTodayInfo()
-        } else {
-            todayLunch.isHidden = true
-        }
-        
-        // either accept the second article and show it, or hide the section
-        if list.count >= 2 {
-            tomorrowLunchArticle = list[1]
-            tomorrowLunch.isHidden = false
-            fillTomorrowInfo()
-        }
-    }
-    /* reacts to notice that a daily announcements data download has occurred */
-    func receiveDailyannUpdate(list: [Article]) {
-        
-        // if there is at least one daily announcement post, keep it
-        guard list.count > 0 else {
-            return
-        }
-        todayDailyannArticle = list[0]
-        fillTodayInfo()
-    }
-    
-    /* determines if the most recent daily announcement post belongs with the
-       schedule being shown in the today section */
+    /**
+     Determines if the most recent daily announcement post belongs with the
+     schedule being shown in the today section
+     - Returns: TRUE if the post's publish date matches "today's" schedule date
+     */
     func dailyannIsPosted() -> Bool {
         guard let article = todayDailyannArticle else {
             return false
@@ -345,26 +290,148 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         }
     }
     
+    //===================================================================================================
+    // pragma MARK:  DOWNLOAD RESPONSE
+    //===================================================================================================
+
+    /**
+     Responds to notice that some type of data download occurred
+     - Parameter storeType: the type of articles received
+     - Parameter list: the list of articles
+     */
+    func receiveUpdate(storeType: ArticleStore.StoreType, list: [Article]) {
+        if storeType == ArticleStore.StoreType.NEWS {
+            receiveNewsUpdate(list: list)
+            
+        } else if storeType == ArticleStore.StoreType.DAILY_ANN {
+            receiveDailyannUpdate(list: list)
+            
+        }  else if storeType == ArticleStore.StoreType.LUNCH {
+            receiveLunchUpdate(list: list)
+            
+        } else if storeType == ArticleStore.StoreType.SCHEDULES {
+            receiveSchedUpdate(list: list)
+            
+        }
+    }
+    
+    /**
+     Responds to notice that a news data download has occurred
+     - Parameter list: the list of articles
+     */
+    func receiveNewsUpdate(list: [Article]) {
+        
+        // either accept the first article and show it, or hide the news section
+        if list.count >= 1 {
+            newsArticle = list[0]
+            
+            newsView.isHidden = false
+            fillNewsInfo()
+        } else {
+            newsView.isHidden = true
+        }
+    }
+    
+    /**
+     Responds to notice that a schedule data download has occurred
+     - Parameter list: the list of articles
+     */
+    func receiveSchedUpdate(list: [Article]) {
+        
+        // either accept the first article for today and show it, or hide the section
+        if list.count >= 1 {
+            todaySchedArticle = list[0]
+            todayView.isHidden = false
+            fillTodayInfo()
+        } else {
+            todayView.isHidden = true
+        }
+        
+        // either accept the second article for tomorrow and show it, or hide the section
+        if list.count >= 2 {
+            tomorrowSchedArticle = list[1]
+            tomorrowView.isHidden = false
+            fillTomorrowInfo()
+        } else {
+            tomorrowView.isHidden = true
+        }
+    }
+    
+    /**
+     Responds to notice that a lunch data download has occurred
+     - Parameter list: the list of articles
+     */
+    func receiveLunchUpdate(list: [Article]) {
+        
+        // either accept the first article and show it, or hide the section
+        if list.count >= 1 {
+            todayLunchArticle = list[0]
+            todayLunch.isHidden = false
+            fillTodayInfo()
+        } else {
+            todayLunch.isHidden = true
+        }
+        
+        // either accept the second article and show it, or hide the section
+        if list.count >= 2 {
+            tomorrowLunchArticle = list[1]
+            tomorrowLunch.isHidden = false
+            fillTomorrowInfo()
+        }
+    }
+    /**
+     Responds to notice that a dailyann data download has occurred
+     - Parameter list: the list of articles
+     */
+    func receiveDailyannUpdate(list: [Article]) {
+        
+        // if there is at least one daily announcement post, keep it
+        guard list.count > 0 else {
+            return
+        }
+        todayDailyannArticle = list[0]
+        fillTodayInfo()
+    }
+    
+    //===================================================================================================
+    // pragma MARK:  HELPERS AND FORMATTERS
+    //===================================================================================================
+    
+    /**
+     Prepare data transfer when pushing to another view
+     - Parameter segue: the segue to be performed
+     - Parameter sender: the class that triggered the function
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // if pushing to a news DetailView...
         if segue.identifier == "homeNewsPush" {
             let controller = segue.destination as! NewsDetailViewController
+            controller.navigationItem.leftItemsSupplementBackButton = true
+            
+            // if there is an article ready, push it. Otherwise, push the most recent article
             if self.pushNewsIndex >= 0 {
                 controller.pushNewsIndex = self.pushNewsIndex
                 self.pushNewsIndex = -1
             } else {
                 controller.article = newsArticle
             }
-            controller.navigationItem.leftItemsSupplementBackButton = true
+
+        // else if pushing to the daily announcements DetailView...
         } else if segue.identifier == "homeDailyannPush" {
             let controller = segue.destination as! DailyannDetailViewController
-            //article not set. Use default (most current post)
             controller.navigationItem.leftItemsSupplementBackButton = true
+            //article not set. Use default (most current post)
         }
     }
     
-    /* formats the dates */
+    /**
+     Formats the date
+     */
     func formatDate(date: Date) -> String {
         let df = DateFormatter()
+        
+        // e.g. Monday, December 4, 2017
         df.dateFormat = "EEEE, MMMM d, YYYY"
         return df.string(from: date)
     }

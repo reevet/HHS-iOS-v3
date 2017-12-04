@@ -8,15 +8,17 @@
 
 import UIKit
 
-/* the tablecontroller that displays the list of schedules */
+/**
+ The TableView Controller that displays the list of schedules
+ */
 class SchedulesTableViewController: BaseTableViewController {
 
-    // the hamburger icon in the top left
+    /// the hamburger icon in the top left
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    var debugTag = false
-    
-    /* starts the controller */
+    /**
+     Starts the controller
+     */
     override func viewDidLoad() {
         
         // sets the header image and gives it scrolling parallax animation
@@ -33,8 +35,11 @@ class SchedulesTableViewController: BaseTableViewController {
         super.viewDidLoad()
     }
     
-    /* groups the articles into sections and rows, so that they will
-       display under headers like "This Week" and "Next week"  */
+    /**
+     Groups the articles into sections and rows, so that they will display under headers like "This Week" and "Next week"
+     - Parameter list: the array of articles to group
+     - Returns: an array of ArticleGroups
+     */
     override func groupArticles(list: [Article]) -> [ArticleGroup] {
         
         var groupedList = [ArticleGroup]()  // the list of new sections/rows
@@ -51,10 +56,6 @@ class SchedulesTableViewController: BaseTableViewController {
         // loop through the articles in the list
         for article in list {
             
-            if debugTag == true {
-                debugTag = false
-                continue
-            }
             // gets the date and week-of-year of this article
             let date = article.date
             let week = calendar.dateComponents(in: TimeZone.current, from: date).weekOfYear

@@ -8,24 +8,19 @@
 
 import UIKit
 
+/**
+ The cell that shows one row in the SchedulesTableView table
+ */
 class SchedulesTableViewCell: BaseTableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
-    @IBOutlet weak var disclosureIcon: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    /**
+     Fills the cell's views with article data
+     - Parameter article: the article to display in the row
+     */
     override func fillCellWith(article: Article) {
         self.titleLabel.text = article.title
         

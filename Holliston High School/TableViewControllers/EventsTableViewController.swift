@@ -8,7 +8,9 @@
 
 import UIKit
 
-/* the tablecontroller that displays the list of school events */
+/**
+ The TableView Controller that displays the list of school events
+ */
 class EventsTableViewController: BaseTableViewController {
     
     // the hamburger icon in the top left
@@ -31,8 +33,11 @@ class EventsTableViewController: BaseTableViewController {
         super.viewDidLoad()
     }
     
-    /* groups the articles into sections and rows, so that they will
-     display under headers like "Today" and "Tomorrow"  */
+    /**
+     Groups the articles into sections and rows, so that they will display under headers like "Today" and "Tomorrow"
+     - Parameter list: the array of articles to group
+     - Returns: an array of ArticleGroups
+     */
     override func groupArticles(list: [Article]) -> [ArticleGroup] {
         
         var groupedList = [ArticleGroup]()  // the list of new sections/rows

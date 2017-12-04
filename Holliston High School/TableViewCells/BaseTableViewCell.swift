@@ -8,21 +8,14 @@
 
 import UIKit
 
+/**
+ A base tableview cell. Used by the other tableViewCells. Provides a basic interface for the population of data into the cell's views
+ */
 class BaseTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
+    @IBOutlet weak var disclosureIcon: UIImageView!
     
     /** OVERRIDE IN SUBCLASSES */
     func fillCellWith(article: Article) {
     }
-
 }

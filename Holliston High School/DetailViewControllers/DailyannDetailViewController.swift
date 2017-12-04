@@ -8,7 +8,8 @@
 
 import UIKit
 
-/* the viewController for showing a single Daily Announcement post */
+/**
+ The View Controller for showing a single Daily Announcement post */
 class DailyannDetailViewController: UIViewController {
 
     // the webview element to be filled
@@ -21,13 +22,17 @@ class DailyannDetailViewController: UIViewController {
         }
     }
     
-    /* starts the controller */
+    /**
+     Starts the controller
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
     
-    /* retrieves and displays the necessary article */
+    /**
+     Retrieves and displays the necessary article
+     */
     func configureView() {
         
         // if article isn't set, uses the first article in the article store

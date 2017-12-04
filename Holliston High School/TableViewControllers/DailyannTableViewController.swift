@@ -8,7 +8,9 @@
 
 import UIKit
 
-/* the tablecontroller that displays the list of schedules */
+/**
+ The TableView Controller  that displays the list of daily announcements posts
+ */
 class DailyannTableViewController: BaseTableViewController {
     
     // the hamburger icon in the top left
@@ -31,8 +33,11 @@ class DailyannTableViewController: BaseTableViewController {
         super.viewDidLoad()
     }
     
-    /* groups the articles into sections and rows, so that they will
-     display under headers like "This Week" and "Next week"  */
+    /**
+     Groups the articles into sections and rows, so that they will display under headers like "This Week" and "Next week"
+     - Parameter list: the array of articles to group
+     - Returns: an array of ArticleGroups
+     */
     override func groupArticles(list: [Article]) -> [ArticleGroup] {
         
         var groupedList = [ArticleGroup]()  // the list of new sections/rows

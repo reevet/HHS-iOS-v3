@@ -8,13 +8,17 @@
 
 import UIKit
 
-/* the tablecontroller that displays the list of lunch menus */
+/**
+ The TableView Controller that displays the list of lunch menus
+ */
 class LunchTableViewController: BaseTableViewController {
     
     // the hamburger menu in the top left
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    /* starts the controller */
+    /**
+     Starts the controller
+     */
     override func viewDidLoad() {
         
         // sets the header image and gives it scrolling parallax animation
@@ -31,8 +35,11 @@ class LunchTableViewController: BaseTableViewController {
         super.viewDidLoad()
     }
 
-    /* groups the articles into sections and rows, so that they will
-     display under headers like "This Week" and "Next week"  */
+    /**
+     Groups the articles into sections and rows, so that they will display under headers like "This Week" and "Next week"
+     - Parameter list: the array of articles to group
+     - Returns: an array of ArticleGroups
+     */
     override func groupArticles(list: [Article]) -> [ArticleGroup] {
         
         var groupedList = [ArticleGroup]()  // the list of new sections/rows
