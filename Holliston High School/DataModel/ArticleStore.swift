@@ -36,12 +36,28 @@ public class ArticleStore {
     }
     
     /**
-    The ways to sort articles.
-     - GET_PAST: calls for articles from today and earlier
-     - GET_FUTURE: calls for article from today and into the future
+     Gets the urls and api keys for each store type. These are stored in a separate class that is NOT shared on GitHub, to keep the embedded API keys private
      */
-    enum SortOrder {
-        case GET_PAST, GET_FUTURE
+    var feedString: String {
+        return FeedUrls.getFeedStringFor(storeType: self.type)
+    }
+    
+    /**
+     Provides the string name of a store based on its StoreType
+     */
+    var name: String {
+        switch self.type {
+        case .SCHEDULES:
+            return "schedules"
+        case .EVENTS:
+            return "events"
+        case .LUNCH:
+            return "lunch"
+        case .DAILY_ANN:
+            return "dailyann"
+        case .NEWS:
+            return "news"
+        }
     }
     
     /**
@@ -63,61 +79,12 @@ public class ArticleStore {
         self.type = type
         
         //get articles from the local storage, if available
-        let list = loadStoreFromCache()
-        if list != nil {
-            self.articleList = list as [Article]!
+        if let list = loadStoreFromCache() {
+            self.articleList = list
         } else {
             downloadArticles()
         }
     }
-    
-    //===================================================================================================
-    // pragma MARK:  ACCESSORS (sort of)
-    //===================================================================================================
-
-    /**
-    Gets the urls and api keys for each store type. These are stored in a separate class that is NOT shared on GitHub, to keep the embedded API keys private
-     */
-    static func getFeedStringFor(storeType: StoreType) -> String {
-        return FeedUrls.getFeedStringFor(storeType: storeType)
-    }
-    
-    /**
-    Gets the sortOrder associated with a store type
-     */
-    static func getSortOrderFor(storeType: StoreType) -> SortOrder{
-        switch (storeType) {
-        case ArticleStore.StoreType.SCHEDULES,
-             ArticleStore.StoreType.LUNCH,
-             ArticleStore.StoreType.EVENTS:
-            // looks for articles from now into the future
-            return ArticleStore.SortOrder.GET_FUTURE
-            
-        case ArticleStore.StoreType.DAILY_ANN,
-             ArticleStore.StoreType.NEWS:
-            // looks for articles from now into the past
-            return ArticleStore.SortOrder.GET_PAST
-        }
-    }
-    
-    /**
-     Provides the string name of a store based on its StoreType
-     */
-    static func getStoreNameFor(storeType: StoreType) -> String {
-        switch storeType {
-        case .SCHEDULES:
-            return "schedules"
-        case .EVENTS:
-            return "events"
-        case .LUNCH:
-            return "lunch"
-        case .DAILY_ANN:
-            return "dailyann"
-        case .NEWS:
-            return "news"
-        }
-    }
-    
     
     //===================================================================================================
     // pragma MARK:  QUERIES
@@ -128,16 +95,20 @@ public class ArticleStore {
      - Returns: an array of articles
      */
     func queryArticles() -> [Article] {
+        var articles: [Article]
+        
         switch (type) {
             case ArticleStore.StoreType.SCHEDULES,
                  ArticleStore.StoreType.LUNCH,
                  ArticleStore.StoreType.EVENTS:
-            return queryArticlesStarting(date: today())
+            articles = queryArticlesStarting(date: today())
             
             case ArticleStore.StoreType.DAILY_ANN,
                  ArticleStore.StoreType.NEWS:
-            return queryArticles(limit: 40)
+            articles = queryArticles(limit: 40)
         }
+        // return what articles we have, even if a download is in progress
+        return articles
     }
     
     /**
@@ -179,6 +150,20 @@ public class ArticleStore {
         return returnList
     }
     
+    /**
+     Determines if an article with the exact same date is already in the store
+     - Parameter newArticle: the article to check for
+     - Returns: true if the article is already in the store, false if missing or data does not match
+    */
+    func isInStore(newArticle: Article) -> Bool {
+        for article in self.articleList {
+            if article.equals(article: newArticle) {
+                return true
+            }
+        }
+        return false
+    }
+    
     
     //===================================================================================================
     // pragma MARK:  CACHING
@@ -190,7 +175,7 @@ public class ArticleStore {
      */
     func articleArchivePath() -> String {
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
-        let storeName = ArticleStore.getStoreNameFor(storeType: type)
+        let storeName = self.name
         let pathComponent = "articles-\(storeName).archive"
         return (documentDirectory + pathComponent)
     }
@@ -201,8 +186,12 @@ public class ArticleStore {
      */
     func loadStoreFromCache() -> [Article]? {
         let path = articleArchivePath()
-        let list = NSKeyedUnarchiver.unarchiveObject(withFile: path) as? [Article]
-        return list
+        if let list = NSKeyedUnarchiver.unarchiveObject(withFile: path) as? [Article] {
+            if list.count > 0 {
+                return list
+            }
+        }
+        return nil
     }
     
     /**
@@ -215,10 +204,7 @@ public class ArticleStore {
         let fileManager = FileManager.default
         try? fileManager.removeItem(atPath: path)
         
-        let success = NSKeyedArchiver.archiveRootObject(articleList, toFile: path)
-        let name = ArticleStore.getStoreNameFor(storeType: type)
-        
-        print("Results of saveStore for \(name): \(success)")
+        NSKeyedArchiver.archiveRootObject(articleList, toFile: path)
     }
 
     //===================================================================================================
@@ -254,7 +240,7 @@ public class ArticleStore {
         let todayString = dateFormatter.string(from: today)
         
         // get the url string for this store
-        let baseFeedString = ArticleStore.getFeedStringFor(storeType: type)
+        let baseFeedString = self.feedString
         
         // add the date to the url to query only items today and later
         let feedUrlString = "\(baseFeedString)&timeMin=\(todayString)"
@@ -286,7 +272,7 @@ public class ArticleStore {
     func getArticlesFromGoogleSites() {
         
         // get the url string for this store
-        let url = URL(string: ArticleStore.getFeedStringFor(storeType: type))
+        let url = URL(string: self.feedString)
         
         // create a task that will run in a separate background thread,
         // without slowing down the UI
@@ -304,7 +290,6 @@ public class ArticleStore {
                 self.processNewData(list: list)
             }
             /* End definition async task function */
-
         }
         
         // run the async task
@@ -317,7 +302,7 @@ public class ArticleStore {
     func getArticlesFromBlogger() {
         
         // get the url string for this store
-        let baseFeedString = ArticleStore.getFeedStringFor(storeType: type)
+        let baseFeedString = self.feedString
         
         // create a task that will run in a separate background thread,
         // without slowing down the UI
@@ -357,9 +342,21 @@ public class ArticleStore {
             self.onDataUpdate?(list)
         })
         
-        print("Items downloaded for \(ArticleStore.getStoreNameFor(storeType: self.type))")
         // cache the store
         self.saveStore()
+        
+        // count results for the console
+        var count = 0
+        var notcount = 0
+        for article in list {
+            if !isInStore(newArticle: article) {
+                count += 1
+            } else {
+                notcount += 1
+            }
+        }
+        
+        print("Downloaded for \(self.name): \(count) new,  \(notcount) already exist")
     }
     
     //===================================================================================================

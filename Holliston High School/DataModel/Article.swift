@@ -92,5 +92,27 @@ public class Article: NSObject, NSCoding {
         details = aDecoder.decodeObject(forKey: "details") as! String
         imgSrc = aDecoder.decodeObject(forKey: "imgSrc") as! String
     }
+    
+    //===================================================================================================
+    // pragma MARK:  HELPERS
+    //===================================================================================================
+
+    /**
+    Compares this article to another, so see if their information is the same
+     - Parameter article: the second article, to which the instance is compared
+     - Returns: true is the information is the same, false if anything if different
+     */
+    func equals(article: Article) -> Bool {
+        let titleMatches = (self.title == article.title)
+        let dateMatches = (self.date == article.date)
+        let detailMatches = (self.details == article.details)
+        let urlMatches = (self.url == article.url)
+        let imgSrcMatches = (self.imgSrc == article.imgSrc)
+        
+        if titleMatches && dateMatches && detailMatches && urlMatches && imgSrcMatches {
+            return true
+        }
+        return false
+    }
 }
 
