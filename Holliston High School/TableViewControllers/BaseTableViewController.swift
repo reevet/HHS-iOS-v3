@@ -108,7 +108,7 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
         var articleRows = [ArticleGroup.ArticleRow]()
         
         for article in list {
-            let newRow = ArticleGroup.ArticleRow(article: article, cellType: ArticleGroup.ArticleRow.CellType.ARTICLE)
+            let newRow = ArticleGroup.ArticleRow(article: article, cellType: .ARTICLE)
             articleRows.append(newRow)
         }
         
@@ -272,7 +272,7 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
         let cellType = self.groupedArticles[indexPath.section].articleRows[indexPath.row].cellType
         
         // if this is a detail row, base the height on whether or not the row is hidden
-        if cellType == ArticleGroup.ArticleRow.CellType.DETAIL {
+        if cellType == .DETAIL {
             let visible = self.groupedArticles[indexPath.section].articleRows[indexPath.row].visible
             if visible {
                 return UITableViewAutomaticDimension
@@ -328,7 +328,7 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
         
         // base calculations on whether it was the ARTICLE or the DETAIL that was clicked
         switch cellType {
-        case ArticleGroup.ArticleRow.CellType.ARTICLE:
+        case .ARTICLE:
             
             // since the clicked row is an article, the articleRowNum = THIS row, and
             // (possibly) the detailRowNum will be the NEXT row
@@ -336,13 +336,13 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
             
             // check to make sure that a detail row exists immediately following this article
             if articleRowNum + 1 < groupedArticles[indexPath.section].articleRows.count &&
-                groupedArticles[indexPath.section].articleRows[articleRowNum + 1].cellType == ArticleGroup.ArticleRow.CellType.DETAIL {
+                groupedArticles[indexPath.section].articleRows[articleRowNum + 1].cellType == .DETAIL {
                 
                 //if so, set the detailRowNumber to the NEXT row
                 detailRowNum = articleRowNum + 1
             }
             
-        case ArticleGroup.ArticleRow.CellType.DETAIL:
+        case .DETAIL:
             
             // since the clicked row is a detail, the articleRowNum = PREVIOUS row, and
             // the detailRowNum will be THIS row
@@ -382,8 +382,8 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
             }
         default:
             break
-            //ArticleStore.StoreType.DAILY_ANN:
-            //ArticleStore.StoreType.NEWS:
+            //.DAILY_ANN:
+            //.NEWS:
             //do nothing - no disclosure icon
         }
     }
@@ -423,7 +423,7 @@ class BaseTableViewController: UITableViewController, APParallaxViewDelegate, SW
                 self.article = article
                 self.cellType = cellType
                 self.visible = true
-                if cellType == CellType.DETAIL {
+                if cellType == .DETAIL {
                     //sets initial visibility to false (compressed) for detail rows
                     self.visible = false
                 }

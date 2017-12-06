@@ -28,7 +28,7 @@ class NewsTableViewController: BaseTableViewController {
         
         // self.type is defined in the superclass
         // this must be set BEFORE calling super.viewDidLoad()
-        self.type = ArticleStore.StoreType.NEWS
+        self.type = .NEWS
         
         // gets articles from the store
         let articles = getArticlesFromStore()

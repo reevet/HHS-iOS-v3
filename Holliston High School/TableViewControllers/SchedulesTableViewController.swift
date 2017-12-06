@@ -29,7 +29,7 @@ class SchedulesTableViewController: BaseTableViewController {
         
         /// self.type is defined in the superclass
         // this must be set BEFORE calling super.viewDidLoad()
-        self.type = ArticleStore.StoreType.SCHEDULES
+        self.type = .SCHEDULES
         
         // run the superclasse's viewDidLoad
         super.viewDidLoad()
@@ -85,8 +85,7 @@ class SchedulesTableViewController: BaseTableViewController {
             }
             
             // create a new ArticleRow for this section
-            let articleRow = ArticleGroup.ArticleRow(article: article,
-                                             cellType: ArticleGroup.ArticleRow.CellType.ARTICLE)
+            let articleRow = ArticleGroup.ArticleRow(article: article, cellType: .ARTICLE)
             
             let groupIndex = groupedList.count - 1   // the index of the last group in the array
             
@@ -96,7 +95,7 @@ class SchedulesTableViewController: BaseTableViewController {
             // if the article has details (and it should), add another row with the details.
             // This new row will expand/contract when its article is tapped
             if article.details != "" {
-                let detailsRow = ArticleGroup.ArticleRow(article: article, cellType: ArticleGroup.ArticleRow.CellType.DETAIL)
+                let detailsRow = ArticleGroup.ArticleRow(article: article, cellType: .DETAIL)
                 groupedList[groupIndex].articleRows.append(detailsRow)
             }
         }

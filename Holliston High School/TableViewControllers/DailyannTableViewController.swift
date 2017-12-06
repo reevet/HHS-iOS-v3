@@ -27,7 +27,7 @@ class DailyannTableViewController: BaseTableViewController {
         
         // self.type is defined in the superclass
         // this must be set BEFORE calling super.viewDidLoad()
-        self.type = ArticleStore.StoreType.DAILY_ANN
+        self.type = .DAILY_ANN
         
         // run the superclasse's viewDidLoad
         super.viewDidLoad()
@@ -83,8 +83,7 @@ class DailyannTableViewController: BaseTableViewController {
             }
             
             // create a new ArticleRow for this section
-            let articleRow = ArticleGroup.ArticleRow(article: article,
-                                                     cellType: ArticleGroup.ArticleRow.CellType.ARTICLE)
+            let articleRow = ArticleGroup.ArticleRow(article: article, cellType: .ARTICLE)
             
             let groupIndex = groupedList.count - 1   // the index of the last group in the array
             

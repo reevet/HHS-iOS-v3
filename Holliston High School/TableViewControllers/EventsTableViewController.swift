@@ -27,7 +27,7 @@ class EventsTableViewController: BaseTableViewController {
         
         // self.type is defined in the superclass
         // this must be set BEFORE calling super.viewDidLoad()
-        self.type = ArticleStore.StoreType.EVENTS
+        self.type = .EVENTS
         
         // run the superclasse's viewDidLoad
         super.viewDidLoad()
@@ -87,13 +87,13 @@ class EventsTableViewController: BaseTableViewController {
             
             // create a new ArticleRow for this section
             groupedList[groupIndex].articleRows.append(
-                ArticleGroup.ArticleRow(article: article, cellType: ArticleGroup.ArticleRow.CellType.ARTICLE))
+                ArticleGroup.ArticleRow(article: article, cellType: .ARTICLE))
             
             // if the article has details (and it should), add another row with the details.
             // This new row will expand/contract when its article is tapped
             if article.details != "" {
                 groupedList[groupIndex].articleRows.append(
-                    ArticleGroup.ArticleRow(article: article, cellType: ArticleGroup.ArticleRow.CellType.DETAIL))
+                    ArticleGroup.ArticleRow(article: article, cellType: .DETAIL))
             }
         }
         

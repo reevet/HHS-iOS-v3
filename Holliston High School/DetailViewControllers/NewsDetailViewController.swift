@@ -42,7 +42,7 @@ class NewsDetailViewController: UIViewController {
         
         // if article isn't set, uses the first article in the article store
         if article == nil {
-            let store = ArticleStore(type: ArticleStore.StoreType.NEWS)
+            let store = ArticleStore(type: .NEWS)
             let articles = store.queryArticles(limit: 1)
             if articles.count > 0 {
                 if self.pushNewsIndex >= 0 {

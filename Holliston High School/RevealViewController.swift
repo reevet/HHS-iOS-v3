@@ -26,11 +26,11 @@ class RevealViewController: SWRevealViewController {
      Requests a data download from each of the five article stores
     */
     func refreshData() {
-        refreshArticleStore(storeType: ArticleStore.StoreType.SCHEDULES)
-        refreshArticleStore(storeType: ArticleStore.StoreType.EVENTS)
-        refreshArticleStore(storeType: ArticleStore.StoreType.LUNCH)
-        refreshArticleStore(storeType: ArticleStore.StoreType.DAILY_ANN)
-        refreshArticleStore(storeType: ArticleStore.StoreType.NEWS)
+        refreshArticleStore(storeType: .SCHEDULES)
+        refreshArticleStore(storeType: .EVENTS)
+        refreshArticleStore(storeType: .LUNCH)
+        refreshArticleStore(storeType: .DAILY_ANN)
+        refreshArticleStore(storeType: .NEWS)
     }
     
     /**

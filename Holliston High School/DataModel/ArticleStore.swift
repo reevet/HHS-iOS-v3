@@ -98,13 +98,13 @@ public class ArticleStore {
         var articles: [Article]
         
         switch (type) {
-            case ArticleStore.StoreType.SCHEDULES,
-                 ArticleStore.StoreType.LUNCH,
-                 ArticleStore.StoreType.EVENTS:
+            case .SCHEDULES,
+                 .LUNCH,
+                 .EVENTS:
             articles = queryArticlesStarting(date: today())
             
-            case ArticleStore.StoreType.DAILY_ANN,
-                 ArticleStore.StoreType.NEWS:
+            case .DAILY_ANN,
+                 .NEWS:
             articles = queryArticles(limit: 40)
         }
         // return what articles we have, even if a download is in progress
@@ -216,15 +216,15 @@ public class ArticleStore {
      */
     func downloadArticles() {
         switch (self.type) {
-        case ArticleStore.StoreType.SCHEDULES,
-             ArticleStore.StoreType.LUNCH,
-             ArticleStore.StoreType.EVENTS:
+        case .SCHEDULES,
+             .LUNCH,
+             .EVENTS:
             getArticlesFromGoogleCalendar()
             
-        case ArticleStore.StoreType.DAILY_ANN:
+        case .DAILY_ANN:
             self.getArticlesFromGoogleSites()
             
-        case ArticleStore.StoreType.NEWS:
+        case .NEWS:
             self.getArticlesFromBlogger()
         }
     }

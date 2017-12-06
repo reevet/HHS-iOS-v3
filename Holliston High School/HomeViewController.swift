@@ -77,7 +77,7 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         /* set up News section */
         
         // set the news article source
-        let newsStore = ArticleStore(type: ArticleStore.StoreType.NEWS)
+        let newsStore = ArticleStore(type: .NEWS)
         // set the function that will fire when an asynchronous data download is finished
         newsStore.onDataUpdate = { [weak self] (list: [Article]) in
             self?.receiveNewsUpdate(list: list)
@@ -88,7 +88,7 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         /* set up the Today section */
         
         // set up Today source
-        let scheduleStore = ArticleStore(type: ArticleStore.StoreType.SCHEDULES)
+        let scheduleStore = ArticleStore(type: .SCHEDULES)
         //set the function that will fire when an asychronous data download is finished
         scheduleStore.onDataUpdate = { [weak self] (list: [Article]) in
             self?.receiveSchedUpdate(list: list)
@@ -99,7 +99,7 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         /* set the Tomorrow source */
         
         // set up Tomorrow section
-        let lunchStore = ArticleStore(type: ArticleStore.StoreType.LUNCH)
+        let lunchStore = ArticleStore(type: .LUNCH)
         // set the function that will fire when an asychronous data download is finished
         lunchStore.onDataUpdate = { [weak self] (list: [Article]) in
             self?.receiveLunchUpdate(list: list)
@@ -110,7 +110,7 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
         /* set up the Daily Announcement section */
         
         // set up the daily announcement source
-        let dailyannStore = ArticleStore(type: ArticleStore.StoreType.DAILY_ANN)
+        let dailyannStore = ArticleStore(type: .DAILY_ANN)
         // set the function that will fire when an asychronous data download is finished
         dailyannStore.onDataUpdate = { [weak self] (list: [Article]) in
             self?.receiveDailyannUpdate(list: list)
@@ -300,16 +300,16 @@ class HomeViewController: UIViewController, SWRevealViewControllerDelegate {
      - Parameter list: the list of articles
      */
     func receiveUpdate(storeType: ArticleStore.StoreType, list: [Article]) {
-        if storeType == ArticleStore.StoreType.NEWS {
+        if storeType == .NEWS {
             receiveNewsUpdate(list: list)
             
-        } else if storeType == ArticleStore.StoreType.DAILY_ANN {
+        } else if storeType == .DAILY_ANN {
             receiveDailyannUpdate(list: list)
             
-        }  else if storeType == ArticleStore.StoreType.LUNCH {
+        }  else if storeType == .LUNCH {
             receiveLunchUpdate(list: list)
             
-        } else if storeType == ArticleStore.StoreType.SCHEDULES {
+        } else if storeType == .SCHEDULES {
             receiveSchedUpdate(list: list)
             
         }

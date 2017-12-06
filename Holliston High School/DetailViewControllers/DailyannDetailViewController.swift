@@ -37,7 +37,7 @@ class DailyannDetailViewController: UIViewController {
         
         // if article isn't set, uses the first article in the article store
         if article == nil {
-            let store = ArticleStore(type: ArticleStore.StoreType.DAILY_ANN)
+            let store = ArticleStore(type: .DAILY_ANN)
             let articles = store.queryArticles(limit: 1)
             if articles.count > 0 {
                 self.article = articles[0]
