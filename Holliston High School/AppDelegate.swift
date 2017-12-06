@@ -69,7 +69,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let updateVal = update as! String
             if updateVal == "news" {
                 if let revealViewController = self.window?.rootViewController as? RevealViewController {
-                    revealViewController.refreshData()
+                    revealViewController.refreshArticleStore(storeType: .NEWS)
+                }
+            }
+            else if updateVal == "dailyann" {
+                if let revealViewController = self.window?.rootViewController as? RevealViewController {
+                    revealViewController.refreshArticleStore(storeType: .DAILY_ANN)
                 }
             }
         }
@@ -157,7 +162,11 @@ extension AppDelegate : MessagingDelegate {
         
         Messaging.messaging().subscribe(toTopic: "news")
         Messaging.messaging().subscribe(toTopic: "updates")
-        //Messaging.messaging().subscribe(toTopic: "debug")
+        #if DEBUG
+            Messaging.messaging().subscribe(toTopic: "debug")
+        #else
+            Messaging.messaging().unsubscribe(fromTopic: "debug")
+        #endif
     }
     
     //START ios 10 data message

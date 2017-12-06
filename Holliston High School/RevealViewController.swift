@@ -15,9 +15,12 @@ import Toast_Swift
  */
 class RevealViewController: SWRevealViewController {
     
-    
     /// Tracks when a news article is being requested. If a specific news article is being pushed to the detail view, this number will indicate the array position of the article, where 0 is the most recent article. -1 indicates no article being pushed.
     var pushNewsIndex = -1
+    
+    override func viewDidLoad() {
+        refreshData()
+    }
     
     /**
      Requests a data download from each of the five article stores
