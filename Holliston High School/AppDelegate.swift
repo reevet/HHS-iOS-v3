@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
 
-    // runs after the app has launched. This is the "beginning point" of the app
+    /**
+     Runs after the app has launched. This is the "beginning point" of the app
+     */
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         /* sets up Firebase Cloud Messaging system, to allow for automatic notifications of new
@@ -48,7 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func applicationWillEnterForeground(application: UIApplication) {
+    /**
+    This is set up to attach the cloud messaging to the app when in the foreground
+     */
+    func applicationWillEnterForeground(_ application: UIApplication) {
         if let rootViewController = self.window?.rootViewController as? RevealViewController {
             rootViewController.refreshData()
         }
@@ -57,8 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 
-    // this runs with a remote (cloud) notification comes in
+    /**
+    This runs with a remote (cloud) notification comes in
+     */
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
         if let messageId = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageId)")
         }
@@ -67,57 +75,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let update = userInfo["update_data"] {
             let updateVal = update as! String
-            if updateVal == "news" {
-                if let revealViewController = self.window?.rootViewController as? RevealViewController {
-                    revealViewController.refreshArticleStore(storeType: .NEWS)
+            if let revealViewController = self.window?.rootViewController as? RevealViewController {
+                    revealViewController.refreshArticleStore(name: updateVal)
                 }
-            }
-            else if updateVal == "dailyann" {
-                if let revealViewController = self.window?.rootViewController as? RevealViewController {
-                    revealViewController.refreshArticleStore(storeType: .DAILY_ANN)
-                }
-            }
         }
         
-        if let aps = userInfo["aps" as String] as? [String: AnyObject] {
-            if let alert = aps["alert"] as? [String: String] {
-                if let body = alert["body"] {
-                    if let rootViewController = self.window?.rootViewController as? RevealViewController {
-                        let index = rootViewController.newsArticleIndexFor(headline: body)
-                        if index >= 0 {
-                            rootViewController.showNewsArticle(index: index)
-                        }
-                    }
+        if let title = userInfo["title"] {
+            let titleVal = title as! String
+            if let rootViewController = self.window?.rootViewController as? RevealViewController {
+                let index = rootViewController.newsArticleIndexFor(headline: titleVal)
+                if index >= 0 {
+                    rootViewController.showNewsArticle(index: index)
                 }
             }
         }
         
         completionHandler(UIBackgroundFetchResult.newData)
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
 }
-
 
 //Firebase Cloud Messaging code
 @available(iOS 10, *)

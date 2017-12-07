@@ -67,6 +67,32 @@ class RevealViewController: SWRevealViewController {
         store.downloadArticles()
     }
     
+    
+    /**
+     Triggers a refreshArticleStore for a type based on a string (usually sent from a cloud notification
+     - Parameter name: the string values for the store. Allowed values are "schedules", "events", "lunch", "dailyann", "news". Any other value triggers a refresh of all five stores.
+     */
+    func refreshArticleStore(name: String) {
+        switch name {
+        case "schedules" :
+            refreshArticleStore(storeType: .SCHEDULES)
+        case "events" :
+            refreshArticleStore(storeType: .EVENTS)
+        case "lunch" :
+            refreshArticleStore(storeType: .LUNCH)
+        case "dailyann" :
+            refreshArticleStore(storeType: .DAILY_ANN)
+        case "news" :
+            refreshArticleStore(storeType: .NEWS)
+        default:
+            refreshArticleStore(storeType: .SCHEDULES)
+            refreshArticleStore(storeType: .EVENTS)
+            refreshArticleStore(storeType: .LUNCH)
+            refreshArticleStore(storeType: .DAILY_ANN)
+            refreshArticleStore(storeType: .NEWS)
+        }
+    }
+    
     /**
      Checks the NEWS articlestore for a news article with a matching headline. This is usually called by AppDelegate in response to a notification
      - Parameter headline: the title of the news post to find
