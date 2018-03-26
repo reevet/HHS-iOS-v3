@@ -8,48 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		0A526ABEE60DB0C2AA89D2ED /* Pods_Holliston_High_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1F81F2B9DF6A56C2AC2B19 /* Pods_Holliston_High_School.framework */; };
-		470262B41FC31E5C00A89D97 /* SchedulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B31FC31E5C00A89D97 /* SchedulesTableViewCell.swift */; };
-		470262B61FC31F4700A89D97 /* SchedulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */; };
-		470262B81FC3222600A89D97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B71FC3222600A89D97 /* MenuViewController.swift */; };
-		4727732C1FC663BD00870CF4 /* LunchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */; };
-		4727732E1FC664AF00870CF4 /* LunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732D1FC664AF00870CF4 /* LunchTableViewCell.swift */; };
-		472773301FC664BD00870CF4 /* LunchDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732F1FC664BD00870CF4 /* LunchDetailsTableViewCell.swift */; };
 		472773341FC6693300870CF4 /* SWRevealViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472773351FC6693300870CF4 /* SWRevealViewController.framework */; };
 		472AB8721FC61FBD00D89A98 /* APParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472AB8731FC61FBD00D89A98 /* APParallaxHeader.framework */; };
 		472D01951FCE3DB2001A593A /* Toast_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472D01961FCE3DB2001A593A /* Toast_Swift.framework */; };
-		478544321FCB5FCC00A2D926 /* FeedUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544311FCB5FCC00A2D926 /* FeedUrls.swift */; };
-		478544341FCB665D00A2D926 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544331FCB665D00A2D926 /* NewsTableViewController.swift */; };
-		478544361FCB67DF00A2D926 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544351FCB67DF00A2D926 /* NewsTableViewCell.swift */; };
 		478544371FCB7AEB00A2D926 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478544381FCB7AEB00A2D926 /* Kingfisher.framework */; };
-		4785443A1FCB81D900A2D926 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544391FCB81D900A2D926 /* NewsDetailViewController.swift */; };
-		479590AB1FC2FE810090817F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590AA1FC2FE810090817F /* AppDelegate.swift */; };
 		479590B01FC2FE810090817F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479590AE1FC2FE810090817F /* Main.storyboard */; };
 		479590B21FC2FE810090817F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479590B11FC2FE810090817F /* Assets.xcassets */; };
 		479590B51FC2FE810090817F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479590B31FC2FE810090817F /* LaunchScreen.storyboard */; };
 		479590C01FC2FE810090817F /* Holliston_High_SchoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590BF1FC2FE810090817F /* Holliston_High_SchoolTests.swift */; };
 		479590CB1FC2FE810090817F /* Holliston_High_SchoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590CA1FC2FE810090817F /* Holliston_High_SchoolUITests.swift */; };
-		479590D91FC300620090817F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590D81FC300620090817F /* Article.swift */; };
-		479590DC1FC303680090817F /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590DB1FC303680090817F /* ArticleStore.swift */; };
-		479728561FC7183200437F8C /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728551FC7183200437F8C /* EventsTableViewController.swift */; };
-		479728581FC7184600437F8C /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728571FC7184600437F8C /* EventsTableViewCell.swift */; };
-		4797285A1FC7185800437F8C /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */; };
-		479D25FB1FC37DD70029CC19 /* CocoaPods install instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D25FA1FC37DD70029CC19 /* CocoaPods install instructions.swift */; };
-		479D26031FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */; };
-		47B0D21F1FCB890600391C5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47B0D21E1FCB890600391C5E /* GoogleService-Info.plist */; };
+		4798C5382069279700D0D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798C50E2069279700D0D0B1 /* Assets.xcassets */; };
+		4798C5392069279700D0D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C50F2069279700D0D0B1 /* LaunchScreen.storyboard */; };
+		4798C53A2069279700D0D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C5112069279700D0D0B1 /* Main.storyboard */; };
+		4798C5432069279700D0D0B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4798C51D2069279700D0D0B1 /* GoogleService-Info.plist */; };
+		4798C5482069279700D0D0B1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C5232069279700D0D0B1 /* Storyboard.storyboard */; };
+		4798C5A420692B1000D0D0B1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590D81FC300620090817F /* Article.swift */; };
+		4798C5A520692B1000D0D0B1 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590DB1FC303680090817F /* ArticleStore.swift */; };
+		4798C5A620692B1000D0D0B1 /* FeedUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544311FCB5FCC00A2D926 /* FeedUrls.swift */; };
+		4798C5A720692B1000D0D0B1 /* JsonGoogleCalendarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */; };
+		4798C5A820692B1000D0D0B1 /* JsonBloggerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7231FC8853100ED7ED0 /* JsonBloggerParser.swift */; };
+		4798C5A920692B1000D0D0B1 /* XmlGoogleSitesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7211FC8850700ED7ED0 /* XmlGoogleSitesParser.swift */; };
+		4798C5AA20692B1B00D0D0B1 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6C1FCFC9B1006071B5 /* BaseTableViewCell.swift */; };
+		4798C5AB20692B1B00D0D0B1 /* SchedulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B31FC31E5C00A89D97 /* SchedulesTableViewCell.swift */; };
+		4798C5AC20692B1B00D0D0B1 /* LunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732D1FC664AF00870CF4 /* LunchTableViewCell.swift */; };
+		4798C5AD20692B1B00D0D0B1 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728571FC7184600437F8C /* EventsTableViewCell.swift */; };
+		4798C5AE20692B1B00D0D0B1 /* DailyannTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71D1FC87E1600ED7ED0 /* DailyannTableViewCell.swift */; };
+		4798C5AF20692B1B00D0D0B1 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544351FCB67DF00A2D926 /* NewsTableViewCell.swift */; };
+		4798C5B020692B1B00D0D0B1 /* ScheduleDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7B1921FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift */; };
+		4798C5B120692B1B00D0D0B1 /* LunchDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732F1FC664BD00870CF4 /* LunchDetailsTableViewCell.swift */; };
+		4798C5B220692B1B00D0D0B1 /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */; };
+		4798C5B320692B2100D0D0B1 /* CustomSchedualTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798C56E20692A3D00D0D0B1 /* CustomSchedualTableViewController.swift */; };
+		4798C5B420692B2100D0D0B1 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */; };
+		4798C5B520692B2100D0D0B1 /* SchedulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */; };
+		4798C5B620692B2100D0D0B1 /* LunchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */; };
+		4798C5B720692B2100D0D0B1 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479728551FC7183200437F8C /* EventsTableViewController.swift */; };
+		4798C5B820692B2100D0D0B1 /* DailyannTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71B1FC87DFC00ED7ED0 /* DailyannTableViewController.swift */; };
+		4798C5B920692B2100D0D0B1 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544331FCB665D00A2D926 /* NewsTableViewController.swift */; };
+		4798C5BA20692B2500D0D0B1 /* DailyannDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC5CB61FC902B30014BF52 /* DailyannDetailViewController.swift */; };
+		4798C5BB20692B2C00D0D0B1 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544391FCB81D900A2D926 /* NewsDetailViewController.swift */; };
+		4798C5BC20692B3300D0D0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590AA1FC2FE810090817F /* AppDelegate.swift */; };
+		4798C5BD20692B3300D0D0B1 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6A1FCF16B4006071B5 /* RevealViewController.swift */; };
+		4798C5BE20692B3300D0D0B1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470262B71FC3222600A89D97 /* MenuViewController.swift */; };
+		4798C5BF20692B3300D0D0B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCFA7F1FCC382E00B91792 /* HomeViewController.swift */; };
 		47B482641FC704C5002E5D51 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B482651FC704C5002E5D51 /* SwiftSoup.framework */; };
 		47BC376D1FCB971700740E49 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BC376E1FCB971700740E49 /* GoogleToolboxForMac.framework */; };
 		47BC5CB31FC8FA090014BF52 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BC5CB41FC8FA090014BF52 /* Fuzi.framework */; };
-		47BC5CB71FC902B30014BF52 /* DailyannDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC5CB61FC902B30014BF52 /* DailyannDetailViewController.swift */; };
-		47BCFA801FCC382E00B91792 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCFA7F1FCC382E00B91792 /* HomeViewController.swift */; };
-		47D3FC6B1FCF16B4006071B5 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6A1FCF16B4006071B5 /* RevealViewController.swift */; };
-		47D3FC6D1FCFC9B1006071B5 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3FC6C1FCFC9B1006071B5 /* BaseTableViewCell.swift */; };
-		47D5025D1FC62D28002FAFB3 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */; };
 		47E6FB031FD1E36200D0888F /* FeedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E6FB041FD1E36200D0888F /* FeedKit.framework */; };
-		47E9B71C1FC87DFC00ED7ED0 /* DailyannTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71B1FC87DFC00ED7ED0 /* DailyannTableViewController.swift */; };
-		47E9B71E1FC87E1600ED7ED0 /* DailyannTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B71D1FC87E1600ED7ED0 /* DailyannTableViewCell.swift */; };
-		47E9B7221FC8850700ED7ED0 /* XmlGoogleSitesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7211FC8850700ED7ED0 /* XmlGoogleSitesParser.swift */; };
-		47E9B7241FC8853100ED7ED0 /* JsonBloggerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9B7231FC8853100ED7ED0 /* JsonBloggerParser.swift */; };
-		47F7B1941FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7B1921FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,42 @@
 		479728551FC7183200437F8C /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		479728571FC7184600437F8C /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		479728591FC7185800437F8C /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4798C50D2069279700D0D0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4798C50E2069279700D0D0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4798C5102069279700D0D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4798C5122069279700D0D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4798C5142069279700D0D0B1 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		4798C5152069279700D0D0B1 /* ArticleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
+		4798C5162069279700D0D0B1 /* FeedUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedUrls.swift; sourceTree = "<group>"; };
+		4798C5172069279700D0D0B1 /* JsonBloggerParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonBloggerParser.swift; sourceTree = "<group>"; };
+		4798C5182069279700D0D0B1 /* JsonGoogleCalendarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonGoogleCalendarParser.swift; sourceTree = "<group>"; };
+		4798C5192069279700D0D0B1 /* XmlGoogleSitesParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlGoogleSitesParser.swift; sourceTree = "<group>"; };
+		4798C51B2069279700D0D0B1 /* DailyannDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyannDetailViewController.swift; sourceTree = "<group>"; };
+		4798C51C2069279700D0D0B1 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4798C51D2069279700D0D0B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4798C51E2069279700D0D0B1 /* Holliston High School.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Holliston High School.entitlements"; sourceTree = "<group>"; };
+		4798C51F2069279700D0D0B1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4798C5202069279700D0D0B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4798C5212069279700D0D0B1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4798C5222069279700D0D0B1 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
+		4798C5232069279700D0D0B1 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		4798C5262069279700D0D0B1 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		4798C5272069279700D0D0B1 /* DailyannTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyannTableViewCell.swift; sourceTree = "<group>"; };
+		4798C5282069279700D0D0B1 /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4798C5292069279700D0D0B1 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		4798C52A2069279700D0D0B1 /* LunchDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4798C52B2069279700D0D0B1 /* LunchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchTableViewCell.swift; sourceTree = "<group>"; };
+		4798C52C2069279700D0D0B1 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		4798C52D2069279700D0D0B1 /* ScheduleDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4798C52E2069279700D0D0B1 /* SchedulesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulesTableViewCell.swift; sourceTree = "<group>"; };
+		4798C5302069279700D0D0B1 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		4798C5312069279700D0D0B1 /* CustomSchedualTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSchedualTableViewController.swift; sourceTree = "<group>"; };
+		4798C5322069279700D0D0B1 /* DailyannTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyannTableViewController.swift; sourceTree = "<group>"; };
+		4798C5332069279700D0D0B1 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		4798C5342069279700D0D0B1 /* LunchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchTableViewController.swift; sourceTree = "<group>"; };
+		4798C5352069279700D0D0B1 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		4798C5362069279700D0D0B1 /* SchedulesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulesTableViewController.swift; sourceTree = "<group>"; };
+		4798C56E20692A3D00D0D0B1 /* CustomSchedualTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSchedualTableViewController.swift; sourceTree = "<group>"; };
 		479D25FA1FC37DD70029CC19 /* CocoaPods install instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CocoaPods install instructions.swift"; sourceTree = "<group>"; };
 		479D26021FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonGoogleCalendarParser.swift; sourceTree = "<group>"; };
 		47B0D21E1FCB890600391C5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -181,6 +221,7 @@
 		4720120F1FC4E84B0060F82E /* TableViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4798C56E20692A3D00D0D0B1 /* CustomSchedualTableViewController.swift */,
 				47D5025C1FC62D28002FAFB3 /* BaseTableViewController.swift */,
 				470262B51FC31F4700A89D97 /* SchedulesTableViewController.swift */,
 				4727732B1FC663BD00870CF4 /* LunchTableViewController.swift */,
@@ -281,6 +322,88 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		4798C50C2069279700D0D0B1 /* Holliston High School */ = {
+			isa = PBXGroup;
+			children = (
+				4798C50D2069279700D0D0B1 /* AppDelegate.swift */,
+				4798C50E2069279700D0D0B1 /* Assets.xcassets */,
+				4798C50F2069279700D0D0B1 /* LaunchScreen.storyboard */,
+				4798C5112069279700D0D0B1 /* Main.storyboard */,
+				4798C5132069279700D0D0B1 /* DataModel */,
+				4798C51A2069279700D0D0B1 /* DetailViewControllers */,
+				4798C51D2069279700D0D0B1 /* GoogleService-Info.plist */,
+				4798C51E2069279700D0D0B1 /* Holliston High School.entitlements */,
+				4798C51F2069279700D0D0B1 /* HomeViewController.swift */,
+				4798C5202069279700D0D0B1 /* Info.plist */,
+				4798C5212069279700D0D0B1 /* MenuViewController.swift */,
+				4798C5222069279700D0D0B1 /* RevealViewController.swift */,
+				4798C5232069279700D0D0B1 /* Storyboard.storyboard */,
+				4798C5242069279700D0D0B1 /* SWReveal */,
+				4798C5252069279700D0D0B1 /* TableViewCells */,
+				4798C52F2069279700D0D0B1 /* TableViewControllers */,
+			);
+			path = "Holliston High School";
+			sourceTree = "<group>";
+		};
+		4798C5132069279700D0D0B1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4798C5142069279700D0D0B1 /* Article.swift */,
+				4798C5152069279700D0D0B1 /* ArticleStore.swift */,
+				4798C5162069279700D0D0B1 /* FeedUrls.swift */,
+				4798C5172069279700D0D0B1 /* JsonBloggerParser.swift */,
+				4798C5182069279700D0D0B1 /* JsonGoogleCalendarParser.swift */,
+				4798C5192069279700D0D0B1 /* XmlGoogleSitesParser.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4798C51A2069279700D0D0B1 /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4798C51B2069279700D0D0B1 /* DailyannDetailViewController.swift */,
+				4798C51C2069279700D0D0B1 /* NewsDetailViewController.swift */,
+			);
+			path = DetailViewControllers;
+			sourceTree = "<group>";
+		};
+		4798C5242069279700D0D0B1 /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SWReveal;
+			sourceTree = "<group>";
+		};
+		4798C5252069279700D0D0B1 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4798C5262069279700D0D0B1 /* BaseTableViewCell.swift */,
+				4798C5272069279700D0D0B1 /* DailyannTableViewCell.swift */,
+				4798C5282069279700D0D0B1 /* EventsDetailsTableViewCell.swift */,
+				4798C5292069279700D0D0B1 /* EventsTableViewCell.swift */,
+				4798C52A2069279700D0D0B1 /* LunchDetailsTableViewCell.swift */,
+				4798C52B2069279700D0D0B1 /* LunchTableViewCell.swift */,
+				4798C52C2069279700D0D0B1 /* NewsTableViewCell.swift */,
+				4798C52D2069279700D0D0B1 /* ScheduleDetailTableViewCell.swift */,
+				4798C52E2069279700D0D0B1 /* SchedulesTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4798C52F2069279700D0D0B1 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4798C5302069279700D0D0B1 /* BaseTableViewController.swift */,
+				4798C5312069279700D0D0B1 /* CustomSchedualTableViewController.swift */,
+				4798C5322069279700D0D0B1 /* DailyannTableViewController.swift */,
+				4798C5332069279700D0D0B1 /* EventsTableViewController.swift */,
+				4798C5342069279700D0D0B1 /* LunchTableViewController.swift */,
+				4798C5352069279700D0D0B1 /* NewsTableViewController.swift */,
+				4798C5362069279700D0D0B1 /* SchedulesTableViewController.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		47BC5CB51FC9028B0014BF52 /* DetailViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				47E6FB041FD1E36200D0888F /* FeedKit.framework */,
+				4798C50C2069279700D0D0B1 /* Holliston High School */,
 				472D01961FCE3DB2001A593A /* Toast_Swift.framework */,
 				47BC376E1FCB971700740E49 /* GoogleToolboxForMac.framework */,
 				478544381FCB7AEB00A2D926 /* Kingfisher.framework */,
@@ -443,10 +567,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4798C53A2069279700D0D0B1 /* Main.storyboard in Resources */,
+				4798C5432069279700D0D0B1 /* GoogleService-Info.plist in Resources */,
 				479590B51FC2FE810090817F /* LaunchScreen.storyboard in Resources */,
-				47B0D21F1FCB890600391C5E /* GoogleService-Info.plist in Resources */,
 				479590B21FC2FE810090817F /* Assets.xcassets in Resources */,
+				4798C5392069279700D0D0B1 /* LaunchScreen.storyboard in Resources */,
 				479590B01FC2FE810090817F /* Main.storyboard in Resources */,
+				4798C5382069279700D0D0B1 /* Assets.xcassets in Resources */,
+				4798C5482069279700D0D0B1 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,34 +671,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47F7B1941FC5A3FA0029FC62 /* ScheduleDetailTableViewCell.swift in Sources */,
-				470262B61FC31F4700A89D97 /* SchedulesTableViewController.swift in Sources */,
-				4797285A1FC7185800437F8C /* EventsDetailsTableViewCell.swift in Sources */,
-				478544321FCB5FCC00A2D926 /* FeedUrls.swift in Sources */,
-				47D3FC6D1FCFC9B1006071B5 /* BaseTableViewCell.swift in Sources */,
-				478544361FCB67DF00A2D926 /* NewsTableViewCell.swift in Sources */,
-				47E9B71C1FC87DFC00ED7ED0 /* DailyannTableViewController.swift in Sources */,
-				479590AB1FC2FE810090817F /* AppDelegate.swift in Sources */,
-				4727732C1FC663BD00870CF4 /* LunchTableViewController.swift in Sources */,
-				4727732E1FC664AF00870CF4 /* LunchTableViewCell.swift in Sources */,
-				47E9B7221FC8850700ED7ED0 /* XmlGoogleSitesParser.swift in Sources */,
-				47D5025D1FC62D28002FAFB3 /* BaseTableViewController.swift in Sources */,
-				479590DC1FC303680090817F /* ArticleStore.swift in Sources */,
-				479728581FC7184600437F8C /* EventsTableViewCell.swift in Sources */,
-				47E9B71E1FC87E1600ED7ED0 /* DailyannTableViewCell.swift in Sources */,
-				4785443A1FCB81D900A2D926 /* NewsDetailViewController.swift in Sources */,
-				470262B41FC31E5C00A89D97 /* SchedulesTableViewCell.swift in Sources */,
-				479728561FC7183200437F8C /* EventsTableViewController.swift in Sources */,
-				479590D91FC300620090817F /* Article.swift in Sources */,
-				47BCFA801FCC382E00B91792 /* HomeViewController.swift in Sources */,
-				47BC5CB71FC902B30014BF52 /* DailyannDetailViewController.swift in Sources */,
-				470262B81FC3222600A89D97 /* MenuViewController.swift in Sources */,
-				472773301FC664BD00870CF4 /* LunchDetailsTableViewCell.swift in Sources */,
-				479D26031FC3A87F0029CC19 /* JsonGoogleCalendarParser.swift in Sources */,
-				47E9B7241FC8853100ED7ED0 /* JsonBloggerParser.swift in Sources */,
-				478544341FCB665D00A2D926 /* NewsTableViewController.swift in Sources */,
-				479D25FB1FC37DD70029CC19 /* CocoaPods install instructions.swift in Sources */,
-				47D3FC6B1FCF16B4006071B5 /* RevealViewController.swift in Sources */,
+				4798C5BC20692B3300D0D0B1 /* AppDelegate.swift in Sources */,
+				4798C5BD20692B3300D0D0B1 /* RevealViewController.swift in Sources */,
+				4798C5BE20692B3300D0D0B1 /* MenuViewController.swift in Sources */,
+				4798C5BF20692B3300D0D0B1 /* HomeViewController.swift in Sources */,
+				4798C5BB20692B2C00D0D0B1 /* NewsDetailViewController.swift in Sources */,
+				4798C5BA20692B2500D0D0B1 /* DailyannDetailViewController.swift in Sources */,
+				4798C5B320692B2100D0D0B1 /* CustomSchedualTableViewController.swift in Sources */,
+				4798C5B420692B2100D0D0B1 /* BaseTableViewController.swift in Sources */,
+				4798C5B520692B2100D0D0B1 /* SchedulesTableViewController.swift in Sources */,
+				4798C5B620692B2100D0D0B1 /* LunchTableViewController.swift in Sources */,
+				4798C5B720692B2100D0D0B1 /* EventsTableViewController.swift in Sources */,
+				4798C5B820692B2100D0D0B1 /* DailyannTableViewController.swift in Sources */,
+				4798C5B920692B2100D0D0B1 /* NewsTableViewController.swift in Sources */,
+				4798C5AA20692B1B00D0D0B1 /* BaseTableViewCell.swift in Sources */,
+				4798C5AB20692B1B00D0D0B1 /* SchedulesTableViewCell.swift in Sources */,
+				4798C5AC20692B1B00D0D0B1 /* LunchTableViewCell.swift in Sources */,
+				4798C5AD20692B1B00D0D0B1 /* EventsTableViewCell.swift in Sources */,
+				4798C5AE20692B1B00D0D0B1 /* DailyannTableViewCell.swift in Sources */,
+				4798C5AF20692B1B00D0D0B1 /* NewsTableViewCell.swift in Sources */,
+				4798C5B020692B1B00D0D0B1 /* ScheduleDetailTableViewCell.swift in Sources */,
+				4798C5B120692B1B00D0D0B1 /* LunchDetailsTableViewCell.swift in Sources */,
+				4798C5B220692B1B00D0D0B1 /* EventsDetailsTableViewCell.swift in Sources */,
+				4798C5A420692B1000D0D0B1 /* Article.swift in Sources */,
+				4798C5A520692B1000D0D0B1 /* ArticleStore.swift in Sources */,
+				4798C5A620692B1000D0D0B1 /* FeedUrls.swift in Sources */,
+				4798C5A720692B1000D0D0B1 /* JsonGoogleCalendarParser.swift in Sources */,
+				4798C5A820692B1000D0D0B1 /* JsonBloggerParser.swift in Sources */,
+				4798C5A920692B1000D0D0B1 /* XmlGoogleSitesParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +748,22 @@
 				479590B41FC2FE810090817F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4798C50F2069279700D0D0B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4798C5102069279700D0D0B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4798C5112069279700D0D0B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4798C5122069279700D0D0B1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

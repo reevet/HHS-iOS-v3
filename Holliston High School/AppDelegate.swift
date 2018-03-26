@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         return true
     }
-    
+
     /**
     This is set up to attach the cloud messaging to the app when in the foreground
      */

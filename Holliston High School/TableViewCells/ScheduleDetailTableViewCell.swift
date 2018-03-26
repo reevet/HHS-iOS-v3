@@ -31,6 +31,6 @@ class ScheduleDetailTableViewCell: BaseTableViewCell {
      - Parameter article: the article to display in the row
      */
     override func fillCellWith(article: Article) {
-        self.detailsLabel.text = article.details
+        self.detailsLabel.text = CustomSchedualTableViewController.replacing(text: article.details)
     }
 }

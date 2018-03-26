@@ -99,6 +99,15 @@
                                                             <segue destination="lsT-yH-flX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="kUD-eb-tJo"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-iV-uyD">
+                                                        <rect key="frame" x="138" y="16" width="149" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <state key="normal" title="Customize"/>
+                                                        <connections>
+                                                            <segue destination="be8-If-S3c" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9VX-cG-D8u"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="huA-gs-y6m" secondAttribute="bottom" id="2uC-XG-g4x"/>
@@ -1199,6 +1208,156 @@
             </objects>
             <point key="canvasLocation" x="1014" y="610"/>
         </scene>
+        <!--Customize Schedules-->
+        <scene sceneID="yCd-z1-EMC">
+            <objects>
+                <viewController id="4ei-5S-NgS" customClass="CustomSchedualTableViewController" customModule="Holliston_High_School" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="f9c-JO-kYF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3et-Tp-fm3">
+                                <rect key="frame" x="8" y="8" width="359" height="241"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWN-MA-Bza">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use custom names for blocks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-Ve-oi9">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhf-ok-fyU">
+                                                <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-fi-5ci">
+                                        <rect key="frame" x="0.0" y="43" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename Block A as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xD-6p-JdX">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-xG-JTF">
+                                                <rect key="frame" x="154.5" y="0.0" width="204.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="knM-Qe-prQ">
+                                        <rect key="frame" x="0.0" y="85" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename Block B as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSe-Li-Ub5">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e52-aN-bCs">
+                                                <rect key="frame" x="154" y="0.0" width="205" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EM7-7u-Eol">
+                                        <rect key="frame" x="0.0" y="127" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename Block C as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJh-9Q-6yF">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWo-TX-D8m">
+                                                <rect key="frame" x="155" y="0.0" width="204" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xYx-PI-w1A">
+                                        <rect key="frame" x="0.0" y="169" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename Block D as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-lJ-Xeg">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SED-jt-FPE">
+                                                <rect key="frame" x="155" y="0.0" width="204" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-oG-vel">
+                                        <rect key="frame" x="0.0" y="211" width="359" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonClick:" destination="4ei-5S-NgS" eventType="touchUpInside" id="yhL-ae-Kj4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3et-Tp-fm3" firstAttribute="top" secondItem="9kP-vr-EZe" secondAttribute="top" constant="8" id="bjq-dP-QIk"/>
+                            <constraint firstItem="9kP-vr-EZe" firstAttribute="trailing" secondItem="3et-Tp-fm3" secondAttribute="trailing" constant="8" id="lVS-lc-FtA"/>
+                            <constraint firstItem="3et-Tp-fm3" firstAttribute="leading" secondItem="9kP-vr-EZe" secondAttribute="leading" constant="8" id="woe-Sr-bUz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9kP-vr-EZe"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Customize Schedules" id="ziB-0T-uce">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="cdh-rR-3oD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="UseClassNames" destination="yhf-ok-fyU" id="gaM-pO-iQd"/>
+                        <outlet property="blockA" destination="0gU-xG-JTF" id="UuK-pc-b2g"/>
+                        <outlet property="blockB" destination="e52-aN-bCs" id="DXq-hN-uHo"/>
+                        <outlet property="blockC" destination="OWo-TX-D8m" id="MfP-nZ-dkr"/>
+                        <outlet property="blockD" destination="SED-jt-FPE" id="Vwz-eP-bCg"/>
+                        <outlet property="menuButton" destination="cdh-rR-3oD" id="Qlh-sG-rwM"/>
+                        <outlet property="saveButton" destination="Xma-oG-vel" id="fOE-ce-e9J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tb-kF-r9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130.4000000000001" y="1360.569715142429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xug-wZ-CGc">
+            <objects>
+                <navigationController id="be8-If-S3c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EAq-w8-iPt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.70980392160000005" green="0.1176470588" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4ei-5S-NgS" kind="relationship" relationship="rootViewController" id="Ral-jd-eZY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-o0-igp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2078" y="1361"/>
+        </scene>
         <!--Lunch Menus-->
         <scene sceneID="NXF-PN-J1V">
             <objects>
@@ -1294,7 +1453,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51y-N5-0OP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="1319"/>
+            <point key="canvasLocation" x="-436" y="1318.2908545727137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EwM-4g-LHk">
@@ -1335,7 +1494,7 @@
         <image name="Star" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oHe-CL-V6r"/>
+        <segue reference="k1d-GE-ryc"/>
         <segue reference="kY1-9Y-iwB"/>
         <segue reference="Z2z-dk-J0I"/>
         <segue reference="xhT-Zf-n7g"/>

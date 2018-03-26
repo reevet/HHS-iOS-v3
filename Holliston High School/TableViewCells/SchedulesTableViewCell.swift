@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 /**
  The cell that shows one row in the SchedulesTableView table
  */
@@ -16,7 +17,7 @@ class SchedulesTableViewCell: BaseTableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
-    
+    //var custom:CustomSchedualTableViewController
     /**
      Fills the cell's views with article data
      - Parameter article: the article to display in the row
@@ -47,9 +48,11 @@ class SchedulesTableViewCell: BaseTableViewCell {
             self.iconImage.image = #imageLiteral(resourceName: "Star")
         }
         
+        titleLabel.text = CustomSchedualTableViewController.replacing(text: article.title)
         // hides the disclosure icon if there are no details to display
         if article.details == "" {
             self.disclosureIcon.image = nil
         }
+
     }
 }
