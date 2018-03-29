@@ -41,11 +41,11 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
             clearButton.setTitle("Clear", for: [])
         }
         else {
-            blockA.text = ""
-            blockB.text = ""
-            blockC.text = ""
-            blockD.text = ""
-            textAfter.text = ""
+            blockA.text = "A Block"
+            blockB.text = "B Block"
+            blockC.text = "C Block"
+            blockD.text = "D Block"
+            //textAfter.text = ""
             clearButton.setTitle("Load", for: [])
         }
     }
@@ -57,8 +57,8 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            useClassNames.addTarget(self, action: Selector(("replacing:")), for: UIControlEvents.valueChanged)
-            useClassNames.setOn(true, animated: true)
+            //useClassNames.addTarget(self, action: Selector(("replacing:")), for: UIControlEvents.valueChanged)
+            //useClassNames.setOn(true, animated: true)
             let toolBar = UIToolbar()
             let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
             toolBar.sizeToFit()
@@ -76,10 +76,22 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
     }
     func loadDefaults() {
         let defaults = `UserDefaults`.standard
-        blockA.text = (defaults.object(forKey: "BlockA") as! String)
-        blockB.text = (defaults.object(forKey: "BlockB") as! String)
-        blockC.text = (defaults.object(forKey: "BlockC") as! String)
-        blockD.text = (defaults.object(forKey: "BlockD") as! String)
+        if let aText = defaults.object(forKey: "BlockA") as? String {
+            blockA.text = aText
+        }
+        if let bText = defaults.object(forKey: "BlockB") as? String {
+            blockB.text = bText
+        }
+        if let cText = defaults.object(forKey: "BlockC") as? String {
+            blockC.text = cText
+        }
+        if let dText = defaults.object(forKey: "BlockD") as? String {
+            blockD.text = dText
+        }
+        if let switchOn = defaults.object(forKey: "Switch") as? Bool {
+            useClassNames.setOn(switchOn, animated: false)
+        }
+        
     }
     static func switchGet()->Bool{let defaults = `UserDefaults`.standard;
         if defaults.object(forKey: "Switch") == nil{
@@ -120,7 +132,7 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
     }
     
     static func replacing(text: String) -> String {
-        var returntext: String = ""
+        var returntext: String = text
         if switchGet() == true {
         returntext = text.replacingOccurrences(of: "A Block", with: blockAGet())
             .replacingOccurrences(of: "B Block", with: blockBGet())
@@ -130,7 +142,16 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
         return returntext
         
     }
-  //  static func replacing (text: String)-> String{
+    
+    @IBAction func dummySwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            sender.setOn(true, animated: true)
+        } else {
+            sender.setOn(false, animated: true)
+        }
+        saveButtonClick(useClassNames)
+    }
+    //  static func replacing (text: String)-> String{
     //    return replacing(text: text, UseClassNames: UISwitch!.none)
     //}
 }

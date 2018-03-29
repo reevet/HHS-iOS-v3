@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -430,7 +430,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-Ud-TNp">
-                                            <rect key="frame" x="24" y="11" width="327" height="32"/>
+                                            <rect key="frame" x="32" y="11" width="311" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1228,8 +1228,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhf-ok-fyU">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3HY-3n-v4W">
                                                 <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="dummySwitch:" destination="4ei-5S-NgS" eventType="valueChanged" id="gtJ-AA-pq8"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -1301,15 +1304,29 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-oG-vel">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-GN-ISK">
                                         <rect key="frame" x="0.0" y="211" width="359" height="30"/>
-                                        <state key="normal" title="Save">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="saveButtonClick:" destination="4ei-5S-NgS" eventType="touchUpInside" id="yhL-ae-Kj4"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-oG-vel">
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="30"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveButtonClick:" destination="4ei-5S-NgS" eventType="touchUpInside" id="yhL-ae-Kj4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxA-VN-l8e">
+                                                <rect key="frame" x="323" y="0.0" width="36" height="30"/>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButtonClick:" destination="4ei-5S-NgS" eventType="touchUpInside" id="PzA-RT-fyk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1325,13 +1342,14 @@
                         <barButtonItem key="leftBarButtonItem" image="Hamburger" id="cdh-rR-3oD"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="UseClassNames" destination="yhf-ok-fyU" id="gaM-pO-iQd"/>
                         <outlet property="blockA" destination="0gU-xG-JTF" id="UuK-pc-b2g"/>
                         <outlet property="blockB" destination="e52-aN-bCs" id="DXq-hN-uHo"/>
                         <outlet property="blockC" destination="OWo-TX-D8m" id="MfP-nZ-dkr"/>
                         <outlet property="blockD" destination="SED-jt-FPE" id="Vwz-eP-bCg"/>
+                        <outlet property="clearButton" destination="nxA-VN-l8e" id="gBm-Xq-7yr"/>
                         <outlet property="menuButton" destination="cdh-rR-3oD" id="Qlh-sG-rwM"/>
                         <outlet property="saveButton" destination="Xma-oG-vel" id="fOE-ce-e9J"/>
+                        <outlet property="useClassNames" destination="3HY-3n-v4W" id="iky-aD-xm4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tb-kF-r9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
