@@ -19,7 +19,7 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
     @IBOutlet weak var blockD: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var UseClassNames: UISwitch!
+    @IBOutlet weak var useClassNames: UISwitch!
     @IBOutlet weak var testTxt: UITextField!
     @IBOutlet weak var textAfter: UITextField!
     
@@ -30,6 +30,7 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
         defaults.set(blockB.text, forKey: "BlockB")
         defaults.set(blockC.text, forKey: "BlockC")
         defaults.set(blockD.text, forKey: "BlockD")
+        defaults.set(useClassNames.isOn, forKey: "Switch")
         defaults.synchronize()
         
         print("bA=\(String(describing: blockA.text)), bB=\(String(describing: blockB.text)), bC=\(String(describing: blockC.text)), bD =\(String(describing: blockD.text))" )
@@ -56,17 +57,36 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            useClassNames.addTarget(self, action: Selector(("replacing:")), for: UIControlEvents.valueChanged)
+            useClassNames.setOn(true, animated: true)
+            let toolBar = UIToolbar()
+            let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+            toolBar.sizeToFit()
+            blockA.inputAccessoryView = toolBar
+            blockB.inputAccessoryView = toolBar
+            blockC.inputAccessoryView = toolBar
+            blockD.inputAccessoryView = toolBar
+            toolBar.setItems([doneButton], animated: false)
         }
         
         loadDefaults()
     }
-    
+    @objc func doneClicked(){
+        view.endEditing(true)
+    }
     func loadDefaults() {
         let defaults = `UserDefaults`.standard
         blockA.text = (defaults.object(forKey: "BlockA") as! String)
         blockB.text = (defaults.object(forKey: "BlockB") as! String)
         blockC.text = (defaults.object(forKey: "BlockC") as! String)
         blockD.text = (defaults.object(forKey: "BlockD") as! String)
+    }
+    static func switchGet()->Bool{let defaults = `UserDefaults`.standard;
+        if defaults.object(forKey: "Switch") == nil{
+            return false
+        }else{
+            return defaults.object(forKey: "Switch") as! Bool
+        }
     }
    static func blockAGet()->String{let defaults = `UserDefaults`.standard;
     if defaults.object(forKey: "BlockA") == nil {
@@ -98,20 +118,19 @@ class CustomSchedualTableViewController: UIViewController, SWRevealViewControlle
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func UseClassNames(_ sender: Any) {
-        
-       // textAfter.insertText(testTxt.text!
-       //     .replacingOccurrences(of: "A Block", with: blockAGet()+",")
-       //     .replacingOccurrences(of: "B Block", with: blockBGet()+",")
-       //     .replacingOccurrences(of: "C Block", with: blockCGet()+",")
-       //     .replacingOccurrences(of: "D Block", with: blockDGet()))
-    }
+    
     static func replacing(text: String) -> String {
-        let returntext = text.replacingOccurrences(of: "A Block", with: blockAGet())
+        var returntext: String = ""
+        if switchGet() == true {
+        returntext = text.replacingOccurrences(of: "A Block", with: blockAGet())
             .replacingOccurrences(of: "B Block", with: blockBGet())
             .replacingOccurrences(of: "C Block", with: blockCGet())
             .replacingOccurrences(of: "D Block", with: blockDGet())
+        }
         return returntext
         
     }
+  //  static func replacing (text: String)-> String{
+    //    return replacing(text: text, UseClassNames: UISwitch!.none)
+    //}
 }

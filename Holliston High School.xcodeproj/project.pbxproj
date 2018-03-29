@@ -21,7 +21,6 @@
 		4798C5392069279700D0D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C50F2069279700D0D0B1 /* LaunchScreen.storyboard */; };
 		4798C53A2069279700D0D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C5112069279700D0D0B1 /* Main.storyboard */; };
 		4798C5432069279700D0D0B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4798C51D2069279700D0D0B1 /* GoogleService-Info.plist */; };
-		4798C5482069279700D0D0B1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798C5232069279700D0D0B1 /* Storyboard.storyboard */; };
 		4798C5A420692B1000D0D0B1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590D81FC300620090817F /* Article.swift */; };
 		4798C5A520692B1000D0D0B1 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479590DB1FC303680090817F /* ArticleStore.swift */; };
 		4798C5A620692B1000D0D0B1 /* FeedUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478544311FCB5FCC00A2D926 /* FeedUrls.swift */; };
@@ -574,7 +573,6 @@
 				4798C5392069279700D0D0B1 /* LaunchScreen.storyboard in Resources */,
 				479590B01FC2FE810090817F /* Main.storyboard in Resources */,
 				4798C5382069279700D0D0B1 /* Assets.xcassets in Resources */,
-				4798C5482069279700D0D0B1 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

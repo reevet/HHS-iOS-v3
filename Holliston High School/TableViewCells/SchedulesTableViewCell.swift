@@ -49,6 +49,7 @@ class SchedulesTableViewCell: BaseTableViewCell {
         }
         
         titleLabel.text = CustomSchedualTableViewController.replacing(text: article.title)
+        
         // hides the disclosure icon if there are no details to display
         if article.details == "" {
             self.disclosureIcon.image = nil
